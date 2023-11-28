@@ -16,7 +16,8 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'custom_green': '#008000',
-      'gray_300': '#e0e0e0',
+      'gray-300': '#e0e0e0',
+      'gray-800': '#6c757d',
     },
     backgroundImage: {
       'main-image': "url('../src/assets/images/main/background.png')",
