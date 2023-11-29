@@ -1,0 +1,8 @@
+hr {
+    height: 4px;
+    background-size: 200% 100%;
+    background: rgb(56,226,255);
+    background: linear-gradient(90deg, rgba(56,226,255,1) 0%, rgba(116,218,241,1) 30%, rgba(144,253,114,1) 72%, rgba(75,231,0,1) 100%);
+    border: none;
+    transition: all 0.5s ease-out;
+}
