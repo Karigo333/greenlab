@@ -20,6 +20,7 @@ module.exports = {
       'gray-800': '#6c757d',
       'gray-900': '#111827',
       'blue': '0000ff',
+      'light-green': '#35fd7b',
     },
     backgroundImage: {
       'main-image': "url('../src/assets/images/main/background.png')",
@@ -33,6 +34,23 @@ module.exports = {
     container: {
       center: true,
       padding: '8rem',
+    },
+    screens: {
+      "ss": '300px',
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '900px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
     extend: {},
   },
