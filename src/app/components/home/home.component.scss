@@ -5,15 +5,7 @@
     border: 0 solid #000000;
 }
 
-h1 {
-    font-size: 6em;
-}
-
-.paragraph-info {
-    font-size: 2em;
-}
-
-.gradient-button {
+.gradient-button-green {
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
@@ -30,11 +22,11 @@ h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: 0.5s;
 }
-.gradient-button:hover {
+.gradient-button-green:hover {
     background-position: right center;
 }
 
-.gradient-button-orange {
+.gradient-button-blue {
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
@@ -51,7 +43,7 @@ h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: 0.5s;
 }
-.gradient-button-orange:hover {
+.gradient-button-blue:hover {
     background-position: right center;
 }
 
@@ -60,15 +52,9 @@ h1 {
     border-radius: 25px;
 }
 
-.worktime p {
-    font-family: 'Jost', sans-serif;
-    font-size: 23px;
-}
-
 .arrow-down {
-    margin-top: 5%;
+    margin-top: 10%;
     padding-left: 50%;
-
 }
 .arrow-down span {
     display: block;
@@ -97,5 +83,20 @@ h1 {
 100%{
     opacity: 0;
     transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .gradient-button-green {
+        font-size: 10px;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+        margin: 0 5% 0 0;
+    }
+    .gradient-button-blue {
+        font-size: 10px;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+        margin: 0%;
     }
 }

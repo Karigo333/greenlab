@@ -5,3 +5,12 @@ nav > a {
 header {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
+  @media screen and (max-width: 768px) {
+    // .container {
+    //     margin: 0 2rem 0 2rem;
+    // }
+    nav > a {
+        display: none;
+    }
+  }

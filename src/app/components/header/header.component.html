@@ -1,12 +1,16 @@
-<header class="bg-white sticky w-screen">
+<header class="bg-white sticky">
     <div class="container">
         <nav class="mx-auto flex max-w-7xl items-center space-x-10 justify-between p-2 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a routerLink="/" class="-m-1.5 p-1.5 grid justify-items-center">
                     <img class="h-8 w-auto" src="../../../assets/images/logo.png" alt="logo">
-                    <div class="title-text text-slate-950 font-montserrat_alternates font-bold text-sm">Green PCR Lab
-                    </div>
+                    <div class="title-text text-slate-950 font-montserrat_alternates font-bold text-xs lg:text-sm ">Green PCR Lab</div>
                 </a>
+            </div>
+            <div class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
+                    <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
+                </svg>
             </div>
             <a routerLink="/"
                 class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Головна</a>
@@ -24,7 +28,8 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
                 </svg></a>
-            <a routerLink="/guide" class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Як здати
+            <a routerLink="/guide" class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Як
+                здати
                 аналіз</a>
             <a routerLink="/contact"
                 class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Контакти</a>
