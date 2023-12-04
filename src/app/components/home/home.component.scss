@@ -1,4 +1,6 @@
+
 .main-image {
+    min-height: 86dvh;
     border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
     -webkit-border-radius: 0 0 30px 30px;
@@ -100,3 +102,26 @@
         margin: 0%;
     }
 }
+
+.certificate {
+    background: rgb(128,255,211);
+    background: linear-gradient(161deg, rgba(128,255,211,1) 0%, rgba(198,255,128,1) 100%);
+    border-radius: 40% 0 0 40%;
+    -moz-border-radius: 40% 0 0 40%;
+    -webkit-border-radius: 40% 0 0 40%;
+    border: 0 solid #000000;
+}
+
+.certificate img {
+    border-color: aqua;
+    width: 70%;
+    margin-left: 15%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.certificate img:hover {
+    transform: scale(0.98);
+}
+
+

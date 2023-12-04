@@ -21,9 +21,10 @@ module.exports = {
       'gray-900': '#111827',
       'blue': '0000ff',
       'light-green': '#35fd7b',
+      'sky': '#3e2093',
     },
     backgroundImage: {
-      'main-image': "url('../src/assets/images/main/background.png')",
+      'main-image': "url('../src/assets/images/main/background.jpg')",
     },
     fontFamily: {
       raleway: ['Raleway'],
