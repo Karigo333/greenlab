@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { BurgerMenuComponent } from '../../burger-menu/burger-menu.component';
+import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 
 @Component({
     selector: 'app-header',
