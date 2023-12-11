@@ -35,7 +35,7 @@ module.exports = {
     },
     container: {
       screens: {
-        "ss": '320px',
+        "ss": '340px',
         // => @media (min-width: 300px) { ... }
 
         'sm': '640px',

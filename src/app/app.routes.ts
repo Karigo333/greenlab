@@ -4,6 +4,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { GuideComponent } from './components/pages/guide/guide.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { PreparationComponent } from './components/pages/preparation/preparation.component';
+import { RulesComponent } from './components/pages/rules-for-tests/rules.component';
 
 
 export const routes: Routes = [
@@ -11,6 +12,8 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'guide', component: GuideComponent },
     { path: 'preparation', component: PreparationComponent},
+    { path: 'rules', component: RulesComponent},
+
 
     { path: '**', component: NotFoundComponent}
 ];
