@@ -1,6 +1,33 @@
-.guide {
-    min-height: 65.3vh;
+p{
+    margin: 20px 0 20px 0;
 }
+
+p > b {
+    text-decoration: underline;
+}
+
 a {
-    color: blue;
+    color: #0000ff;
 }
+
+
+.gradient-button-green {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, springgreen 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: 0.5s;
+  }
+  .gradient-button-green:hover {
+    background-position: right center;
+  }

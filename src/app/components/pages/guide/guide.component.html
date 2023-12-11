@@ -1,110 +1,45 @@
-<div class="guide container shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    Product name
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Color
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Category
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Price
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Action
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">
-                    Silver
-                </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4">
-                    $2999
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Microsoft Surface Pro
-                </th>
-                <td class="px-6 py-4">
-                    White
-                </td>
-                <td class="px-6 py-4">
-                    Laptop PC
-                </td>
-                <td class="px-6 py-4">
-                    $1999
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Magic Mouse 2
-                </th>
-                <td class="px-6 py-4">
-                    Black
-                </td>
-                <td class="px-6 py-4">
-                    Accessories
-                </td>
-                <td class="px-6 py-4">
-                    $99
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Google Pixel Phone
-                </th>
-                <td class="px-6 py-4">
-                    Gray
-                </td>
-                <td class="px-6 py-4">
-                    Phone
-                </td>
-                <td class="px-6 py-4">
-                    $799
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Apple Watch 5
-                </th>
-                <td class="px-6 py-4">
-                    Red
-                </td>
-                <td class="px-6 py-4">
-                    Wearables
-                </td>
-                <td class="px-6 py-4">
-                    $999
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container ss:max-xl:bg-purple ss:max-xl:min-w-full font-nunito text-lg">
+    <div class="flex flex-wrap justify-center ss:max-xl:min-w-full">
+        <h2 class="text-center text-4xl py-10 text-gray-800 font-semibold">
+            <svg class=" fill-gray-800 mr-3 h-10 inline" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            {{ title }}</h2>
+    </div>
+    <div class="flex flex-wrap justify-between ss:max-xl:min-w-0 ss:max-xl:bg-custom_green">
+        <div class="contacts-image ss:max-xl:mt-5">
+            <img src="../../../../assets/images/guide.png" alt="guide-image" loading="eager">
+        </div>
+        <div class="my-10">
+            <p>Організація лабораторних досліджень, а саме здачі діагностичних тестів складається з декількох етапів:
+            </p>
+            <p><b>1. Підготовка:</b></p>
+            <p>&ndash; визначиться з типом досліджень</p>
+            <p>&ndash; вибрати матеріал для діагностики (з огляду на клінічні ознаки, особливості захворювання і шлях
+                збудника)</p>
+            <p>Підготуйте тварину до аналізу (див. <a routerLink="/pages/preparation.php">Підготуйте тварини до аналізу</a>)
+            </p>
+            <p>&ndash; Підготуйте витратні матеріали для відбору, зберігання та транспортування (див. <a
+                routerLink="/pages/materials.php">Витратний матеріал</a>)</p>
+            <p><b>2. Вибірка для дослідження:</b></p>
+            <p>&ndash; дотримуватися правил відбору матеріалів для лабораторних досліджень (див. <a
+                routerLink="/pages/rules.php">Правила збіру проб</a>)</p>
+            <p><b>3. Оформлення супровідних документів:</b></p>
+            <p>&ndash; маркування пробірок (вказати породу, ім'я тварини та прізвище власника на кожній пробірці, які
+                відправляються в лабораторію) (див. <a routerLink="/pages/marking.php">Маркування проб</a>)</p>
+            <p>&ndash; Заповніть напрямок для дослідження</p>
+            <div class="inline">
+                <a href="../../../../assets/files/blank.pdf" download class="gradient-button-green"><img width="20" class="float-left mr-2"
+                    src="https://img.icons8.com/fluency-systems-regular/48/download--v1.png" alt="Направлення на дослідження" />
+                Напрямок на дослідження
+            </a>
+            </div>
+                
+            <p><b>4. Доставка у лабораторію:</b></p>
+            <p>&ndash; після того, як матеріал буде готовий до відправки в лабораторію, звяжіться з нами для доставки у
+                лабораторію за телефоном (див. <a routerLink="/contact">Контакти</a>). Зразки доставляються в
+                лабораторію в день відбіру або на наступний день Новою поштою. </p>
+            <p class="bg-light-green"><i>Нова пошта №1, м.Чорноморськ, 0962986084, отримувач Зелена Ольга Валеріївна</i></p>
+            <p><b>5. Оплата:</b></p>
+            <p> Реквізити на оплату після отримання матеріалу.</p>
+        </div>
+    </div>
 </div>

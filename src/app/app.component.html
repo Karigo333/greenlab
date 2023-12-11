@@ -1,7 +1,8 @@
 <div class="overflow-x-hidden flex flex-col min-h-full ss:max-xl:min-w-full">
   <app-topbar></app-topbar>
-  <app-header></app-header>
-  <div>
+  <app-header [ngClass]="{'sticky-block': isSticky, 'non-sticky-block': !isSticky}"></app-header>
+  <div [ngStyle]="{'height.px': isSticky ? blockHeight : 0}"></div>
+  <div class="content">
     <router-outlet></router-outlet>
   </div>
   <app-footer class="mt-auto"></app-footer>
