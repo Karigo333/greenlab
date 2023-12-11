@@ -15,6 +15,9 @@ import { RectalSamplingComponent } from './components/pages/rules-pages-collecti
 import { OralSamplingComponent } from './components/pages/rules-pages-collection/selection-pages-collection/oral-sampling/oral-sampling.component';
 import { DischargeSamplingComponent } from './components/pages/rules-pages-collection/selection-pages-collection/discharge-sampling/discharge-sampling.component';
 import { InfoComponent } from './components/pages/services-pages-collection/info/info.component';
+import { PlrCatsComponent } from './components/pages/services-pages-collection/diagnostics-pages-collection/diagnostics-plr-cats/diagnostics-plr-cats.component';
+import { PlrDogsComponent } from './components/pages/services-pages-collection/diagnostics-pages-collection/diagnostics-plr-dogs/diagnostics-plr-dogs.component';
+import { PlrFerretsComponent } from './components/pages/services-pages-collection/diagnostics-pages-collection/diagnostics-plr-ferrets/diagnostics-plr-ferrets.component';
 
 
 export const routes: Routes = [
@@ -33,6 +36,9 @@ export const routes: Routes = [
     { path: 'oral-sampling', component: OralSamplingComponent},
     { path: 'discharge-sampling', component: DischargeSamplingComponent},
     { path: 'info', component: InfoComponent},
+    { path: 'diagnostics-plr-cats', component: PlrCatsComponent},
+    { path: 'diagnostics-plr-dogs', component: PlrDogsComponent},
+    { path: 'diagnostics-plr-ferrets', component: PlrFerretsComponent},
 
     { path: '**', component: NotFoundComponent}
 ];
