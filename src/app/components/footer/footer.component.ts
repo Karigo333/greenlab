@@ -5,10 +5,15 @@ import { RouterOutlet, Router, RouterLink, RouterLinkActive } from '@angular/rou
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  title = 'footer';
+
 }

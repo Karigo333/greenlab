@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -6,7 +6,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-burger-menu',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
+  ],
   templateUrl: './burger-menu.component.html',
   styleUrls: ['./burger-menu.component.scss'],
   animations: [

@@ -1,6 +1,8 @@
 .burger-menu {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
   }
   
   .bar {
@@ -23,3 +25,27 @@
     transform: rotate(45deg) translate(-5px, -6px);
   }
   
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .menu-list.open {
+    display: block;
+  }
+  
+  .menu-list li {
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-list li:hover {
+    background-color: #ddd;
+  }
+  
+  .menu-list ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
