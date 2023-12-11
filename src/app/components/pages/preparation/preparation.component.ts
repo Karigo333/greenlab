@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-preparation',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './preparation.component.html',
-  styleUrl: './preparation.component.scss'
+    selector: 'app-preparation-component',
+    standalone: true,
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        RouterLink,
+        RouterLinkActive
+    ],
+    templateUrl: './preparation.component.html',
+    styleUrl: './preparation.component.scss'
 })
-export class PreparationComponent {
 
+export class PreparationComponent {
+    title = 'Підготовка тварини до аналізів';
 }

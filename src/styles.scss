@@ -114,5 +114,46 @@ hr {
     background: linear-gradient(90deg, rgba(56,226,255,1) 0%, rgba(116,218,241,1) 30%, #90fd72 72%, rgba(75,231,0,1) 100%);
     border: none;
 }
+
+.list-counter-circle {
+    list-style: none;
+    counter-reset: list;
+    margin: 0;
+    padding: 0;
+    overflow: inherit;
+
+}
+.list-counter-circle li {
+    position: relative;
+    line-height: 2rem;
+    margin-left: 1.75rem;
+    margin-bottom: .25rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    border-radius: .25rem;
+
+
+}
+.list-counter-circle>li:last-child {
+    margin-bottom: 0;
+}
+.list-counter-circle>li::before {
+    content: counter(list);
+    counter-increment: list;
+    position: absolute;
+    height: 2rem;
+    left: -1.5rem;
+    // top: -.25rem;
+    // bottom: -.25rem;
+    width: 2rem;
+    line-height: 1.5rem;
+    border-radius: 1.23rem;
+    border: .25rem solid #fff;
+    text-align: center;
+    color: #fff;
+    background: #7b1fa2;
+}
+
+
 // @import "../stylesheets/scss-file";
 
