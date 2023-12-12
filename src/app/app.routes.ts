@@ -56,6 +56,5 @@ export const routes: Routes = [
     { path: 'markers-dogs', component: MarkerDogsComponent},
     { path: 'license', component: LicenseComponent},
 
-
     { path: '**', component: NotFoundComponent}
 ];

@@ -1,5 +1,18 @@
-<div (click)="toggleMenu()" class="burger-menu" [ngClass]="{'open': isOpen}">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-</div>
+<!-- burger-menu.component.html -->
+<div class="burger-menu" [ngClass]="{'open': isOpen}">
+    <div class="burger-icon" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="menu-list">
+      <li *ngFor="let item of menuItems" (click)="handleItemClick(item)">
+        {{ item.title }}
+        <ul *ngIf="item.children && item.children.length && item.isOpen">
+          <li *ngFor="let child of item.children" (click)="handleItemClick(child)">
+            {{ child.title }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>

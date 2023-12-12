@@ -9,12 +9,12 @@
     width: 30px;
     height: 3px;
     background-color: #333;
-    margin: 3px 3px;  
+    margin: 4px 4px;  
     transition: 0.3s;
   }
   
   .open .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-7px, 8px);
+    transform: rotate(-45deg) translate(-4.5px, 5.5px);
   }
   
   .open .bar:nth-child(2) {
@@ -29,7 +29,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: none;
+    display: block;
   }
   
   .menu-list.open {
@@ -39,6 +39,7 @@
   .menu-list li {
     cursor: pointer;
     padding: 10px;
+    position: relative;
   }
   
   .menu-list li:hover {
@@ -48,4 +49,12 @@
   .menu-list ul {
     list-style-type: none;
     padding-left: 20px;
+    position: absolute;
+    left: 100%; /* Отступ от родительского элемента */
+    top: 0;
+    display: none;
+  }
+  
+  .menu-list li:hover > ul {
+    display: block;
   }
