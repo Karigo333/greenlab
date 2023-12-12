@@ -18,6 +18,14 @@ import { InfoComponent } from './components/pages/services-pages-collection/info
 import { PlrCatsComponent } from './components/pages/services-pages-collection/diagnostics-pages-collection/diagnostics-plr-cats/diagnostics-plr-cats.component';
 import { PlrDogsComponent } from './components/pages/services-pages-collection/diagnostics-pages-collection/diagnostics-plr-dogs/diagnostics-plr-dogs.component';
 import { PlrFerretsComponent } from './components/pages/services-pages-collection/diagnostics-pages-collection/diagnostics-plr-ferrets/diagnostics-plr-ferrets.component';
+import { DPCatsComponent } from './components/pages/services-pages-collection/diagnostics-panel-collections/diagnostics-panel-cats/diagnostics-panel-cats.component';
+import { DPDogsComponent } from './components/pages/services-pages-collection/diagnostics-panel-collections/diagnostics-panel-dogs/diagnostics-panel-dogs.component';
+import { HormonesComponent } from './components/pages/services-pages-collection/hormones/hormones.component';
+import { GeneticsComponent } from './components/pages/services-pages-collection/genetics/genetics.component';
+import { BacteriumComponent } from './components/pages/services-pages-collection/bacterium-research/bacterium.component';
+import { MarkerCatsComponent } from './components/pages/services-pages-collection/marker-pages/marker-cats/marker-cats.component';
+import { MarkerDogsComponent } from './components/pages/services-pages-collection/marker-pages/marker-dogs/marker-dogs.component';
+import { LicenseComponent } from './components/pages/license/license.component';
 
 
 export const routes: Routes = [
@@ -39,6 +47,15 @@ export const routes: Routes = [
     { path: 'diagnostics-plr-cats', component: PlrCatsComponent},
     { path: 'diagnostics-plr-dogs', component: PlrDogsComponent},
     { path: 'diagnostics-plr-ferrets', component: PlrFerretsComponent},
+    { path: 'diagnostics-panel-cats', component: DPCatsComponent},
+    { path: 'diagnostics-panel-dogs', component: DPDogsComponent},
+    { path: 'hormones', component: HormonesComponent},
+    { path: 'genetics', component: GeneticsComponent},
+    { path: 'bacterium-research', component: BacteriumComponent},
+    { path: 'markers-cats', component: MarkerCatsComponent},
+    { path: 'markers-dogs', component: MarkerDogsComponent},
+    { path: 'license', component: LicenseComponent},
+
 
     { path: '**', component: NotFoundComponent}
 ];
