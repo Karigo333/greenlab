@@ -22,15 +22,15 @@ interface MenuItem {
   templateUrl: './burger-menu.component.html',
   styleUrls: ['./burger-menu.component.scss'],
   animations: [
-    trigger('changeIcon', [
-      state('open', style({
-        transform: 'rotate(45deg)',
-      })),
-      state('closed', style({
-        transform: 'rotate(0deg)',
-      })),
-      transition('open <=> closed', animate('0.3s ease-in-out')),
-    ]),
+  //   trigger('changeIcon', [
+  //     state('open', style({
+  //       transform: 'rotate(45deg)',
+  //     })),
+  //     state('closed', style({
+  //       transform: 'rotate(0deg)',
+  //     })),
+  //     transition('open <=> closed', animate('0.3s ease-in-out')),
+  //   ]),
   ],
 })
 export class BurgerMenuComponent {
@@ -46,7 +46,7 @@ export class BurgerMenuComponent {
         { title: 'Mobile App Development' },
         { title: 'UI/UX Design' }
       ],
-      isOpen: false // Исправление: добавлено начальное значение isOpen для подменю
+      isOpen: false
     },
     { title: 'Contact' }
   ];
@@ -58,6 +58,7 @@ export class BurgerMenuComponent {
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+    
   }
 
   handleItemClick(item: MenuItem) {

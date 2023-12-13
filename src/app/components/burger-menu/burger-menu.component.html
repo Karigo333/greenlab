@@ -5,7 +5,7 @@
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-    <ul class="menu-list">
+    <ul *ngIf="isOpen" class="menu-list">
       <li *ngFor="let item of menuItems" (click)="handleItemClick(item)">
         {{ item.title }}
         <ul *ngIf="item.children && item.children.length && item.isOpen">
