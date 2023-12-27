@@ -25,15 +25,13 @@
     transform: rotate(45deg) translate(-5px, -6px);
   }
 
-
   .menu-list {
     display: block;
     position: absolute;
-    top: 24.3%;
     left: 0;
     min-width: 100%;
     text-align: center;
-    background-color: #7fffd4;
+    background-color: #86f89f;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
@@ -46,12 +44,12 @@
   
   .menu-list li {
     padding: 10px;
-    border-bottom: 1px solid #03ad55;
+    border-bottom: 1px solid green;
   }
   
   .menu-list li a {
     text-decoration: none;
-    color: #006400;
+    color: #333;
     display: block;
   }
   
@@ -67,39 +65,3 @@
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
-  // .menu-list {
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 24.3%;
-  //   min-width: 100%;
-  //   text-align: center;
-  //   padding: 0;
-  //   margin: 0;
-  //   background-color: #7fffd4;
-  //   z-index: 20;
-  // }
-
-  
-  // .menu-list li {
-  //   padding: 10px;
-  //   position: relative;
-  // }
-  
-  // .menu-list li:hover {
-  //   background-color: #ddd;
-  // }
-  
-  // .menu-list ul {
-  //   list-style-type: none;
-  //   padding-left: 20px;
-  //   position: absolute;
-  //   left: 100%; /*Отступ от родительского элемента */
-  //   top: 0; 
-  //   display: none;
-  // }
-  
-  // .menu-list li:hover > ul {
-  //   display: block;
-  // }

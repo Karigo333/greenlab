@@ -5,19 +5,19 @@
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-    <ul *ngIf="isOpen" class="menu-list">
-      <li *ngFor="let item of menuItems" (click)="handleItemClick(item)">
-        <a [href]="item.link">{{ item.title }}</a>
-        <ul *ngIf="item.children && item.children.length && item.isOpen">
-          <li *ngFor="let child of item.children" (click)="handleItemClick(child)">
-            {{ child.title }}
-            <ul *ngIf="child.children && child.children.length && item.isOpen">
-              <li *ngFor="let second_child of child.children" (click)="handleItemClick(second_child)">
-                {{ second_child.title }}
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <div [ngStyle]="{'top.px': onTop ? toTop : toBottom}" *ngIf="isOpen" class="menu-list"> <!-- [ngStyle]="{'top.%': onTop ? 100 : height}"-->
+      <ul>
+        <li><a routerLink="/">Головна </a></li>
+        <li>
+          <a>Правила збіру проб &#10095;</a>
+          <ul>
+            <li><a routerLink="/service1">Сервис 1</a></li>
+            <li><a routerLink="/service2">Сервис 2</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/contact">Правила &#10095;</a></li>
+        <li><a routerLink="/guide">Як здати аналіз?</a></li>
+        <li><a routerLink="/contact">Контакти</a></li>
+      </ul>
+    </div>
   </div>

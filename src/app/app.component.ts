@@ -7,6 +7,8 @@ import { GuideComponent } from './components/pages/guide/guide.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { BurgerMenuComponent } from '../app/components/burger-menu/burger-menu.component';
+
 import { CommonModule } from '@angular/common';
 
 @Component({
