@@ -16,5 +16,24 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class HomeComponent {
   title = 'home';
+
+  imagePath = '../../../assets/images/main/cert1.png';
+  isModalOpen = false;
+  isEnlarged = false;
+
+  toggleEnlarged(): void {
+    if (!this.isModalOpen) {
+      this.isModalOpen = true;
+    } else {
+      this.isEnlarged = !this.isEnlarged;
+    }
+  }
+
+  closeImageModal(): void {
+    this.isModalOpen = false;
+    this.isEnlarged = false;
+  }
+
+
   
 }

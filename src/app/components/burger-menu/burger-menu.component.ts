@@ -15,25 +15,28 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrls: ['./burger-menu.component.scss'],
 })
 export class BurgerMenuComponent {
-  isOpen: boolean = false;
-  isSubMenuOpen = false;
-  isSubSubMenuOpen = false;
-
+  isOpen = false;
+  subMenus: { [key: string]: boolean } = {};
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+    this.closeSubMenus();
   }
 
   closeMenu() {
     this.isOpen = false;
-    this.isSubMenuOpen = false;
+    this.closeSubMenus();
   }
 
-  toggleSubMenu() {
-    this.isSubMenuOpen = !this.isSubMenuOpen;
+  toggleSubMenu(subMenuKey: string) {
+    this.subMenus[subMenuKey] = !this.subMenus[subMenuKey];
   }
 
-  toggleSubSubMenu() {
-    this.isSubSubMenuOpen = !this.isSubSubMenuOpen;
+  closeSubMenus() {
+    for (const key in this.subMenus) {
+      if (this.subMenus.hasOwnProperty(key)) {
+        this.subMenus[key] = false;
+      }
+    }
   }
 }

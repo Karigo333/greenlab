@@ -68,9 +68,15 @@
           Результати відправляємо на e-mail адресу, а також по пошті на вказаний в бланці адресу.
         </div>
       </div>
-      <div class="py-5">
-        <img src="../../../assets/images/main/cert1.png" alt="Сертифікат №1">
+      <div *ngIf="isModalOpen" class="modal-overlay" (click)="closeImageModal()">
+        <div class="modal-container">
+          <img *ngIf="isModalOpen" [src]="imagePath" alt="Modal Image" class="modal-image">
+        </div>
       </div>
+      <div class="image-container">
+        <img [src]="imagePath" alt="Image" (click)="toggleEnlarged()" [ngClass]="{'enlarged': isEnlarged}">
+      </div>
+
       <div class="pb-5">
         <img src="../../../assets/images/main/cert2.png" alt="Сертифікат №2">
       </div>
@@ -131,7 +137,7 @@
         <div class="font-nunito">
             <div>Лабораторія "Грін ПЛР Лаб" сертифікована за всіма критеріями відповідно до вимог та норм законодавства України. Усі аналізи виконуються виключно на приладах та устаткуванні, які пройшли метрологічну перевірку та відповідають усім вимогам та критеріям діагностичної лабораторії.</div>
             <br/>
-            <a href="/" class="gradient-button-green">Переглянути документи</a>
+            <a routerLink="/license" class="gradient-button-green">Переглянути документи</a>
         </div>
         <div>
         <a href="../../../assets/images/main/doc_certificate.png" target="_blank"><img class="my-3 w-30" loading="lazy" src="../../../assets/images/main/doc_certificate.png"></a>
