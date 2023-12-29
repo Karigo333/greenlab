@@ -17,6 +17,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 export class BurgerMenuComponent {
   isOpen: boolean = false;
   isSubMenuOpen = false;
+  isSubSubMenuOpen = false;
+
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
@@ -29,5 +31,9 @@ export class BurgerMenuComponent {
 
   toggleSubMenu() {
     this.isSubMenuOpen = !this.isSubMenuOpen;
+  }
+
+  toggleSubSubMenu() {
+    this.isSubSubMenuOpen = !this.isSubSubMenuOpen;
   }
 }

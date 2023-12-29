@@ -18,8 +18,8 @@
             <li><a (click)="closeMenu()" routerLink="/marking">Маркування проб</a></li>
             <li><a (click)="closeMenu()" routerLink="/materials">Витратні матеріали</a></li>
             <li>
-              <a routerLink="">Відбір &#10095;</a>
-                <ul>
+              <a routerLink="" (click)="toggleSubSubMenu()">Відбір &#10095;</a>
+                <ul *ngIf="isSubSubMenuOpen">
                   <li><a (click)="closeMenu()" routerLink="/blood-sampling">Вибір крові</a></li>
                   <li><a (click)="closeMenu()" routerLink="/conjunctiva-sampling">Змив з кон&#39;юктиви</a></li>
                   <li><a (click)="closeMenu()" routerLink="/nose-sampling">Змив з носа</a></li>
@@ -37,16 +37,16 @@
             <li><a (click)="closeMenu()" routerLink="/info">Шо таке ПЛР?</a></li>
             <li><a (click)="closeMenu()" routerLink="">Прайс-лист</a></li>
             <li>
-              <a routerLink="">Діагностика ПЛР   &#10095;</a>
-              <ul>
+              <a routerLink="" (click)="toggleSubSubMenu()">Діагностика ПЛР   &#10095;</a>
+              <ul *ngIf="isSubSubMenuOpen">
                 <li><a (click)="closeMenu()" routerLink="/diagnostics-plr-cats">Для котів</a></li>
                 <li><a (click)="closeMenu()" routerLink="/diagnostics-plr-dogs">Для собак</a></li>
                 <li><a (click)="closeMenu()" routerLink="/diagnostics-plr-ferrets">Для тхорів</a></li>
               </ul>
             </li>
             <li>
-              <a routerLink="">Діагностичні панелі ПЛР   &#10095;</a>
-                <ul>
+              <a routerLink="" (click)="toggleSubSubMenu()">Діагностичні панелі ПЛР   &#10095;</a>
+                <ul *ngIf="isSubSubMenuOpen">
                   <li><a (click)="closeMenu()" routerLink="/diagnostics-panel-cats">Для котів</a></li>
                   <li><a (click)="closeMenu()" routerLink="/diagnostics-panel-dogs">Для собак</a></li>
                 </ul>
@@ -55,8 +55,8 @@
             <li><a (click)="closeMenu()" routerLink="/genetics">Генетичні дослідження</a></li>
             <li><a (click)="closeMenu()" routerLink="/bacterium-research">Бакпосів</a></li>
             <li>
-              <a routerLink="">Маркери запалення <span style="color: #ff1818">(новинка)</span> &#10095;</a>
-                <ul>
+              <a routerLink="" (click)="toggleSubSubMenu()">Маркери запалення <span style="color: #ff1818">(новинка)</span> &#10095;</a>
+                <ul *ngIf="isSubSubMenuOpen">
                   <li><a (click)="closeMenu()" routerLink="/markers-cats">Для котів</a></li>
                   <li><a (click)="closeMenu()" routerLink="/markers-dogs">Для собак</a></li>
                 </ul>
