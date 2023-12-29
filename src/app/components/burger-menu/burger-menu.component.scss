@@ -1,8 +1,10 @@
 .burger-menu {
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding: 10px;
+    z-index: 30;
   }
   
   .bar {
@@ -11,6 +13,7 @@
     background-color: #333;
     margin: 4px 4px;  
     transition: 0.2s;
+    z-index: 3;
   }
   
   .open .bar:nth-child(1) {
@@ -25,43 +28,50 @@
     transform: rotate(45deg) translate(-5px, -6px);
   }
 
-  .menu-list {
-    display: block;
+  .menu {
     position: absolute;
-    left: 0;
-    min-width: 100%;
+    top: 100%;
+    left: 0;   
     text-align: center;
-    background-color: #86f89f;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    min-width: 100%; 
+    min-height: 100%;
+    background: #fff;
+    z-index: 2;
+    transform: translateX(-150%);
+    animation: ani 0.5s forwards;
+  }
+
+  @keyframes ani {
+    0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}
   }
   
-  .menu-list ul {
+  .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .menu-list li {
+  .menu ul li {
     padding: 10px;
-    border-bottom: 1px solid green;
   }
   
-  .menu-list li a {
+  .menu ul li a {
     text-decoration: none;
     color: #333;
     display: block;
   }
   
-  .menu-list li ul {
+  .menu ul li a:hover {
+    // background: #000;
+  }
+  
+  .menu ul ul {
+    background: #35ff69;
+    margin-left: 20px;
     display: none;
   }
   
-  .menu-list li:hover ul {
+  .menu ul li:hover > ul {
     display: block;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }

@@ -1,0 +1,23 @@
+p {
+    margin: 20px 0 20px 0;   
+}
+.gradient-button-blue {
+    font-size: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    padding: 5px 10px;
+    margin: 10px 5px 20px 5px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #b5bbff 0%, #24a5ff 51%, #7d93ff 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: 0.5s;
+}
+.gradient-button-blue:hover {
+    background-position: right center;
+}

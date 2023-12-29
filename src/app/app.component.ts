@@ -38,10 +38,10 @@ export class AppComponent {
   handleScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if (scrollPosition <= 99) {
+    if (scrollPosition <= 84) {
       this.isSticky = false;
     } else {
-      this.isSticky = scrollPosition > 100;
+      this.isSticky = scrollPosition > 85;
     }
   }
 

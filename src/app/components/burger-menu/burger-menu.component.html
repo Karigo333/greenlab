@@ -5,19 +5,66 @@
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-    <div [ngStyle]="{'top.px': onTop ? toTop : toBottom}" *ngIf="isOpen" class="menu-list"> <!-- [ngStyle]="{'top.%': onTop ? 100 : height}"-->
+    <div *ngIf="isOpen" class="menu-overlay" (click)="closeMenu()"></div>
+    <div *ngIf="isOpen" class="menu">
+      <hr/>
       <ul>
-        <li><a routerLink="/">Головна </a></li>
+        <li><a (click)="closeMenu()" routerLink="/">Головна </a></li>
         <li>
-          <a>Правила збіру проб &#10095;</a>
-          <ul>
-            <li><a routerLink="/service1">Сервис 1</a></li>
-            <li><a routerLink="/service2">Сервис 2</a></li>
+          <a routerLink="" (click)="toggleSubMenu()">Правила збіру проб &#10095;</a>
+          <ul *ngIf="isSubMenuOpen">
+            <li><a (click)="closeMenu()" routerLink="/preparation">Підготовка тварини до аналізу </a></li>
+            <li><a (click)="closeMenu()" routerLink="/rules">Правила збіру проб</a></li>
+            <li><a (click)="closeMenu()" routerLink="/marking">Маркування проб</a></li>
+            <li><a (click)="closeMenu()" routerLink="/materials">Витратні матеріали</a></li>
+            <li>
+              <a routerLink="">Відбір &#10095;</a>
+                <ul>
+                  <li><a (click)="closeMenu()" routerLink="/blood-sampling">Вибір крові</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/conjunctiva-sampling">Змив з кон&#39;юктиви</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/nose-sampling">Змив з носа</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/vagina-sampling">Зішкріб зі слизової урогенітального тракту, піхви</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/rectal-sampling">Зішкріб зі слизової прямої кишки</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/oral-sampling">Змив з ротової порожнини, глотки</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/discharge-sampling">Відбір випоту (грудного, черевного)</a></li>
+                </ul>
+            </li>
           </ul>
         </li>
-        <li><a routerLink="/contact">Правила &#10095;</a></li>
-        <li><a routerLink="/guide">Як здати аналіз?</a></li>
-        <li><a routerLink="/contact">Контакти</a></li>
+        <li>
+          <a routerLink="" (click)="toggleSubMenu()">Послуги &#10095;</a>
+          <ul *ngIf="isSubMenuOpen">
+            <li><a (click)="closeMenu()" routerLink="/info">Шо таке ПЛР?</a></li>
+            <li><a (click)="closeMenu()" routerLink="">Прайс-лист</a></li>
+            <li>
+              <a routerLink="">Діагностика ПЛР   &#10095;</a>
+              <ul>
+                <li><a (click)="closeMenu()" routerLink="/diagnostics-plr-cats">Для котів</a></li>
+                <li><a (click)="closeMenu()" routerLink="/diagnostics-plr-dogs">Для собак</a></li>
+                <li><a (click)="closeMenu()" routerLink="/diagnostics-plr-ferrets">Для тхорів</a></li>
+              </ul>
+            </li>
+            <li>
+              <a routerLink="">Діагностичні панелі ПЛР   &#10095;</a>
+                <ul>
+                  <li><a (click)="closeMenu()" routerLink="/diagnostics-panel-cats">Для котів</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/diagnostics-panel-dogs">Для собак</a></li>
+                </ul>
+            </li>
+            <li><a (click)="closeMenu()" routerLink="/hormones">Гормони</a></li>
+            <li><a (click)="closeMenu()" routerLink="/genetics">Генетичні дослідження</a></li>
+            <li><a (click)="closeMenu()" routerLink="/bacterium-research">Бакпосів</a></li>
+            <li>
+              <a routerLink="">Маркери запалення <span style="color: #ff1818">(новинка)</span> &#10095;</a>
+                <ul>
+                  <li><a (click)="closeMenu()" routerLink="/markers-cats">Для котів</a></li>
+                  <li><a (click)="closeMenu()" routerLink="/markers-dogs">Для собак</a></li>
+                </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a (click)="closeMenu()" routerLink="/guide">Як здати аналіз?</a></li>
+        <li><a (click)="closeMenu()" routerLink="/contact">Контакти</a></li>
       </ul>
     </div>
   </div>
