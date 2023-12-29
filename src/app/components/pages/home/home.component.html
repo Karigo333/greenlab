@@ -68,17 +68,18 @@
           Результати відправляємо на e-mail адресу, а також по пошті на вказаний в бланці адресу.
         </div>
       </div>
-      <div *ngIf="isModalOpen" class="modal-overlay" (click)="closeImageModal()">
-        <div class="modal-container">
-          <img *ngIf="isModalOpen" [src]="imagePath" alt="Modal Image" class="modal-image">
-        </div>
-      </div>
-      <div class="image-container">
-        <img [src]="imagePath" alt="Image" (click)="toggleEnlarged()" [ngClass]="{'enlarged': isEnlarged}">
-      </div>
 
+      <div class="my-5">
+        <img id="myImg1" src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" (click)="openModal('../../../assets/images/main/cert1.png', 'Сертифікат №1')">
+      </div>
       <div class="pb-5">
-        <img src="../../../assets/images/main/cert2.png" alt="Сертифікат №2">
+        <img id="myImg1" src="../../../assets/images/main/cert2.png" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/cert2.png', 'Сертифікат №2')">
+      </div>
+      
+      <div class="modal" [ngStyle]="{ display: modalOpen ? 'block' : 'none' }">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img class="modal-content" [src]="modalImageUrl" alt="Image">
+        <div id="caption">{{ modalCaption }}</div>
       </div>
     </div>
   </div>

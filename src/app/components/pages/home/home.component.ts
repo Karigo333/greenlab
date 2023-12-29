@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
@@ -17,22 +17,35 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 export class HomeComponent {
   title = 'home';
 
-  imagePath = '../../../assets/images/main/cert1.png';
-  isModalOpen = false;
-  isEnlarged = false;
+  modalOpen = false;
+  modalImageUrl = '';
+  modalCaption = '';
+  
 
-  toggleEnlarged(): void {
-    if (!this.isModalOpen) {
-      this.isModalOpen = true;
-    } else {
-      this.isEnlarged = !this.isEnlarged;
-    }
+  openModal(imageUrl: string, caption: string) {
+    this.modalOpen = true;
+    this.modalImageUrl = imageUrl;
+    this.modalCaption = caption;
   }
 
-  closeImageModal(): void {
-    this.isModalOpen = false;
-    this.isEnlarged = false;
+  closeModal() {
+    this.modalOpen = false;
   }
+  
+  // modalImageSrc = '../../../assets/images/main/cert1.png';
+  // modalOpen = false;
+  // modalImageUrl = '';
+  // modalCaption = '';
+
+  // openModal() {
+  //   this.modalOpen = true;
+  //   this.modalImageUrl = '../../../assets/images/main/cert1.png';
+  //   this.modalCaption = 'Сертифікат №1';
+  // }
+
+  // closeModal() {
+  //   this.modalOpen = false;
+  // }
 
 
   
