@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { SlideshowComponent } from '../../../slideshow/slideshow.component';
 
 @Component({
     selector: 'app-license-component',
@@ -9,7 +10,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         CommonModule,
         RouterOutlet,
         RouterLink,
-        RouterLinkActive
+        RouterLinkActive,
+        SlideshowComponent
     ],
     templateUrl: './license.component.html',
     styleUrl: './license.component.scss'

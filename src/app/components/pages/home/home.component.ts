@@ -32,21 +32,4 @@ export class HomeComponent {
     this.modalOpen = false;
   }
   
-  // modalImageSrc = '../../../assets/images/main/cert1.png';
-  // modalOpen = false;
-  // modalImageUrl = '';
-  // modalCaption = '';
-
-  // openModal() {
-  //   this.modalOpen = true;
-  //   this.modalImageUrl = '../../../assets/images/main/cert1.png';
-  //   this.modalCaption = 'Сертифікат №1';
-  // }
-
-  // closeModal() {
-  //   this.modalOpen = false;
-  // }
-
-
-  
 }
