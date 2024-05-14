@@ -37,11 +37,12 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    console.log(scrollPosition);
 
-    if (scrollPosition <= 84) {
+    if (scrollPosition <= 38) {
       this.isSticky = false;
     } else {
-      this.isSticky = scrollPosition > 85;
+      this.isSticky = scrollPosition > 39;
     }
   }
 

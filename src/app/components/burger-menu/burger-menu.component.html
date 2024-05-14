@@ -1,4 +1,4 @@
-<div class="burger-menu" [ngClass]="{'open': isOpen}">
+<div class="burger-menu lg:invisible" [ngClass]="{'open': isOpen}">
   <div class="burger-icon" (click)="toggleMenu()">
     <div class="bar"></div>
     <div class="bar"></div>
@@ -34,7 +34,7 @@
         <a (click)="toggleSubMenu('servicesSubMenu')">Послуги &#10095;</a>
         <ul *ngIf="subMenus['servicesSubMenu']">
           <li><a (click)="closeMenu()" routerLink="/info">Шо таке ПЛР?</a></li>
-          <li><a (click)="closeMenu()" routerLink="">Прайс-лист (pdf)</a></li>
+          <li><a (click)="closeMenu()" routerLink="../../assets/files/price2023greenlab.pdf" target="_blank">Прайс-лист (pdf)</a></li>
           <li>
             <a (click)="toggleSubMenu('diagnosticsSubMenu')">Діагностика ПЛР   &#10095;</a>
             <ul *ngIf="subMenus['diagnosticsSubMenu']">

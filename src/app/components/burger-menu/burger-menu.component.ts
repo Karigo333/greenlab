@@ -8,7 +8,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterLink,
+    RouterLink, 
     RouterLinkActive
   ],
   templateUrl: './burger-menu.component.html',
