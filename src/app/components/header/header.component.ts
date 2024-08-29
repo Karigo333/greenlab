@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ElementRef, Directive, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
