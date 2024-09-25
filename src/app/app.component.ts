@@ -8,12 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { BurgerMenuComponent } from '../app/components/burger-menu/burger-menu.component';
-import { ScrollService } from './components/services/scroll.service';
-import { isPlatformBrowser } from '@angular/common';
-
-
-
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser  } from '@angular/common';
 
 
 @Component({
@@ -35,23 +30,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 
-export class AppComponent implements AfterViewInit {
-  @ViewChild('topbar', { static: false }) topbar!: ElementRef;
-  topbarHeight: number = 0;
+export class AppComponent implements OnInit {
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
 
-  constructor(
-    private scrollService: ScrollService,
-    private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
-
-  ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.topbarHeight = this.topbar.nativeElement.offsetHeight;
-      this.scrollService.setTopbarHeight(this.topbarHeight);
-
-      // Устанавливаем CSS-переменную для высоты topbar
-      this.renderer.setStyle(document.documentElement, '--topbar-height', `${this.topbarHeight}px`);
-    }
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd && isPlatformBrowser(this.platformId)) {
+        window.scrollTo(0, 0); // Прокрутка наверх только на клиенте
+      }
+    });
   }
 }
