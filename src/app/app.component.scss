@@ -1,23 +1,12 @@
-// :root {
-//   --topbar-height: 98px; /* Установи высоту топбара */
-// }
 
-.fixed-header {
-  position: fixed;
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  background-color: #fff; /* Убедись, что фон задан, чтобы избежать прозрачности */
-}
-
-.content {
-  margin-top: var(--topbar-height); /* Используем переменную CSS для отступа */
-}
-
-.app-topbar {
-  transition: top 0.3s ease-in-out;
 }
 
 .app-header {
   transition: top 0.3s ease-in-out;
 }
+

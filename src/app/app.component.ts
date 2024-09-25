@@ -37,25 +37,20 @@ import { CommonModule } from '@angular/common';
 
 export class AppComponent implements AfterViewInit {
   @ViewChild('topbar', { static: false }) topbar!: ElementRef;
-  isTopbarVisible: boolean = true;
   topbarHeight: number = 0;
 
   constructor(
     private scrollService: ScrollService,
     private renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {
-    this.scrollService.getIsTopbarVisible().subscribe(visible => {
-      this.isTopbarVisible = visible;
-    });
-  }
+  ) {}
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.topbarHeight = this.topbar.nativeElement.offsetHeight;
       this.scrollService.setTopbarHeight(this.topbarHeight);
 
-      // Установка CSS переменной для высоты топбара
+      // Устанавливаем CSS-переменную для высоты topbar
       this.renderer.setStyle(document.documentElement, '--topbar-height', `${this.topbarHeight}px`);
     }
   }
