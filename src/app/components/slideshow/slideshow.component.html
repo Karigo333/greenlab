@@ -1,16 +1,12 @@
 <div class="slideshow-container">
-
-  <div *ngFor="let image of images" class="mySlides fade">
-    <!-- Assuming 'image' is the path to the image -->
+  <div *ngFor="let image of images; let i = index" #mySlides class="mySlides fade">
     <a [href]="image" target="_blank"><img [src]="image" alt="Image" style="width:100%"></a>
   </div>
 
   <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
   <a class="next" (click)="plusSlides(1)">&#10095;</a>
-
 </div>
 <br>
-
 <div style="text-align:center">
-  <span *ngFor="let _ of images; let i = index" class="dot" (click)="currentSlide(i + 1)"></span>
+  <span *ngFor="let image of images; let i = index" #dot class="dot" (click)="currentSlide(i + 1)"></span>
 </div>
