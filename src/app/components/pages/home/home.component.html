@@ -1,10 +1,10 @@
 <div class="home-page">
   <section class="main-image bg-center bg-no-repeat bg-main-image bg-blend-multiply lg:bg-cover">
     <div class="mx-auto max-w-screen-xl text-center pt-14 pb-0">
-      <h2 class="mb-4 mt-14 text-6xl font-nunito font-normal tracking-tight leading-none text-white lg:text-8xl">
+      <h2 class="mb-4 mt-4 text-6xl font-nunito font-normal tracking-tight leading-none text-white md:text-7xl md:mt-8 lg:text-8xl">
         <span class="text-custom_green">Green</span>Lab
       </h2>
-      <p class="paragraph-info mx-3 mb-8 text-2xl font-thin font-nunito text-white lg:text-4xl">
+      <p class="paragraph-info mx-3 mb-8 text-2xl font-thin font-nunito text-white md:text-4xl lg:text-4xl">
         Універсальна ПЛР Лабораторія</p>
       <div class="home-buttons space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
         <a routerLink="/guide"
@@ -16,8 +16,8 @@
           Прайс-лист
         </a>
       </div>
-      <p class="price-info font-raleway my-5 lg:text-lg lg:my-2">Ціни вказані за станом на 20.03.2024</p>
-      <div class="block worktime text-center font-jost p-1 mx-6 lg:text-xl lg:w-1/2 lg:font-medium">
+      <p class="price-info font-raleway my-5 md:text-xl lg:text-lg lg:my-2">Ціни вказані за станом на 20.03.2024</p>
+      <div class="block worktime text-center font-jost p-1 mx-6 md:text-2xl md:mt-36 md:leading-9 lg:text-xl lg:mx-32 lg:font-medium xl:mt-8">
         <p>Графік роботи:</p>
         <p>ПН-СБ 10.00-18.00 (НД-вихідний)</p>
         <p>Доставка з клініки м.Чорноморськ ПН-СБ (НД-вихідний)</p>
@@ -32,7 +32,7 @@
 
   <!-- About us -->
   <div class="container">
-    <div class="font-nunito text-base relative py-6 -mt-8 mb-5 bg-white rounded-3xl shadow-2xl drop-shadow-md lg:mx-64">
+    <div class="font-nunito text-base relative py-6 -mt-8 mb-5 bg-white rounded-3xl shadow-2xl drop-shadow-md md:mx-6 lg:mx-6 ">
       <h2 class="text-center text-3xl pt-3 pb-6 text-gray-800 font-semibold">Про нас</h2>
       <h4 class="text-center font-bold pb-3 px-8">Універсальна ПЛР Лабораторія Green lab</h4>
       <p class="indent-6 px-6">Універсальна лабораторія &ndash; це сучасний ветеринарний діагностичний центр, основний
@@ -65,25 +65,35 @@
   <hr>
 
   <!-- Certificate-->
-    <div class="certificate my-6 flex flex-wrap justify-center ml-4 items-center">
-      <div class="font-nunito m-4">
-        <h2 class="text-center text-xl font-semibold text-gray-800 py-5">Приклад результатів</h2>
-        <div class="text-center text-sm">
-          Результати відправляємо на e-mail адресу, а також по пошті на вказаний в бланці адресу.
-        </div>
-      </div>
-      <div class="flex justify-center items-center">
-        <img id="myImg1" src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" (click)="openModal('../../../assets/images/main/cert1.png', 'Електронний — відправляємо на електронну адресу.')">
-      </div>
-      <div class="flex pb-4 m-4 justify-center items-center">
-        <img id="myImg1" src="../../../assets/images/main/cert2.png" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/cert2.png', 'Друкований (замовляється окремо) — з мокрою печаткою, англійською мовою, відправляється поштою.')">
-      </div>
-      <div class="modal" (click)="closeModal()" [ngStyle]="{ display: modalOpen ? 'block' : 'none' }">
-        <!-- <span class="close" (click)="closeModal()">&times;</span> -->
-        <img class="modal-content" [src]="modalImageUrl" alt="Image">
-        <div id="caption">{{ modalCaption }}</div>
+  <div class="certificate my-6 flex flex-col items-center ml-4 font-nunito">
+    <div class="m-4 text-center">
+      <h2 class="text-xl font-semibold text-gray-800 py-5 lg:text-3xl">Приклад результатів</h2>
+      <div class="text-sm lg:text-xl">
+        Результати відправляємо на e-mail адресу, а також по пошті на вказаний в бланці адресу.
       </div>
     </div>
+  
+    <div class="flex flex-wrap justify-center items-center gap-8">
+      <div class="flex flex-col items-center">
+        <img id="myImg1" src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" 
+             (click)="openModal('../../../assets/images/main/cert1.png', 'Електронний — відправляємо на електронну адресу.')">
+        <div class="text-sm lg:text-lg text-center mt-2 px-10 italic">Електронний — відправляємо на електронну адресу.</div>
+      </div>
+  
+      <div class="flex flex-col items-center">
+        <img id="myImg2" src="../../../assets/images/main/cert2.png" alt="Сертифікат №2" 
+             (click)="openModal('../../../assets/images/main/cert2.png', 'Друкований (замовляється окремо) — з мокрою печаткою, англійською мовою, відправляється поштою.')">
+        <div class="text-sm lg:text-lg text-center mt-2 px-10 italic mb-3">Друкований (замовляється окремо) — з мокрою печаткою, англійською мовою, відправляється поштою.</div>
+      </div>
+    </div>
+  
+    <div class="modal" (click)="closeModal()" [ngStyle]="{ display: modalOpen ? 'block' : 'none' }">
+      <img class="modal-content" [src]="modalImageUrl" alt="Image">
+      <div id="caption">{{ modalCaption }}</div>
+    </div>
+  </div>
+  
+  
   <hr>
 
   <!-- Contacts-->
@@ -93,63 +103,71 @@
         <path
           d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z" />
       </svg>Контакти</h2>
-    <div class="content">
-      <div class="flex flex-wrap place-content-center text-center space-y-8 flex-col">
-        <div class="address-contacts">
-          <svg class="w-6 inline py-1 fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z" />
-          </svg>
-          <div class="topic font-bold mb-3">Адреса</div>
-          <div>м.Чорноморськ</div>
-          <div>вул.Олександрійська, 2</div>
-        </div>
-        <div class="phone-contacts">
-          <svg class="w-6 inline py-1 fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M497.4 361.8l-112-48a24 24 0 0 0 -28 6.9l-49.6 60.6A370.7 370.7 0 0 1 130.6 204.1l60.6-49.6a23.9 23.9 0 0 0 6.9-28l-48-112A24.2 24.2 0 0 0 122.6 .6l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.3 24.3 0 0 0 -14-27.6z" />
-          </svg>
-          <div class="topic font-bold mb-3">Телефон</div>
-          <div>+38-096-298-60-84</div>
-          <div>+38-096-628-27-00</div>
-          <br>
-          <div class="topbar-socials flex flex-wrap justify-center space-x-8">
-            <a href="viber://chat?number=%2B380962986084" target="_blank"><img
-                src="../../../assets/images/topbar/viber.ico" alt="viber"></a>
-            <a href="https://t.me/+380935582302" target="_blank"><img src="../../../assets/images/topbar/telegram.ico"
-                alt="telegram"></a>
+      <div class="content">
+        <div class="flex flex-col md:flex-row flex-wrap place-content-center text-center space-y-8 md:space-y-0 md:space-x-8">
+          <div class="address-contacts">
+            <svg class="w-6 inline py-1 fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z" />
+            </svg>
+            <div class="topic font-bold mb-3">Адреса</div>
+            <div>м.Чорноморськ</div>
+            <div>вул.Олександрійська, 2</div>
+          </div>
+          <div class="phone-contacts">
+            <svg class="w-6 inline py-1 fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M497.4 361.8l-112-48a24 24 0 0 0 -28 6.9l-49.6 60.6A370.7 370.7 0 0 1 130.6 204.1l60.6-49.6a23.9 23.9 0 0 0 6.9-28l-48-112A24.2 24.2 0 0 0 122.6 .6l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.3 24.3 0 0 0 -14-27.6z" />
+            </svg>
+            <div class="topic font-bold mb-3">Телефон</div>
+            <div>+38-096-298-60-84</div>
+            <div>+38-096-628-27-00</div>
+            <br />
+            <div class="topbar-socials flex flex-wrap justify-center space-x-8">
+              <a href="viber://chat?number=%2B380962986084" target="_blank"><img
+                  src="../../../assets/images/topbar/viber.ico" alt="viber"></a>
+              <a href="https://t.me/+380935582302" target="_blank"><img
+                  src="../../../assets/images/topbar/telegram.ico" alt="telegram"></a>
+            </div>
+          </div>
+          <div class="email-contacts py-2">
+            <svg class="w-6 inline fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+            </svg>
+            <div class="topic font-bold mb-3">E-mail</div>
+            <div>green.laboratoriya&#64;gmail.com</div>
+            <div>vetpcrlab&#64;gmail.com</div>
           </div>
         </div>
-        <div class="email-contacts py-2">
-          <svg class="w-6 inline fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-          </svg>
-          <div class="topic font-bold mb-3">E-mail</div>
-          <div>green.laboratoriya&#64;gmail.com</div>
-          <div>vetpcrlab&#64;gmail.com</div>
-        </div>
       </div>
-    </div>
+      
   </div>
   <hr>
 
-    <section class="bg-white">
-      <div class="grid max-w-screen-xl px-6 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div class="mr-auto place-self-center lg:col-span-7 font-nunito text-center">
-              <h1 class="max-w-2xl mb-10 text-gray-800 text-3xl font-semibold tracking-tight leading-none text-center"><svg class="fill-gray-800 mr-1 h-7 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384v38.6C310.1 219.5 256 287.4 256 368c0 59.1 29.1 111.3 73.7 143.3c-3.2 .5-6.4 .7-9.7 .7H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM288 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm211.3-43.3c-6.2-6.2-16.4-6.2-22.6 0L416 385.4l-28.7-28.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l40 40c6.2 6.2 16.4 6.2 22.6 0l72-72c6.2-6.2 6.2-16.4 0-22.6z"/></svg>
-                Дозвільні документи</h1>
-              <p class="max-w-2xl mb-6 font-light text-gray-900 lg:mb-8 md:text-lg lg:text-xl">Лабораторія "Грін ПЛР Лаб" сертифікована за всіма критеріями відповідно до вимог та норм законодавства України. Усі аналізи виконуються виключно на приладах та устаткуванні, які пройшли метрологічну перевірку та відповідають усім вимогам та критеріям діагностичної лабораторії.</p>
-              <a routerLink="/license" class="gradient-button-green inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
-                Переглянути документи
-              </a>
-          </div>
-          <div class="lg:mt-0 lg:col-span-5 lg:flex mt-2 px-20">
-            <img src="../../../assets/images/main/doc_certificate.png" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')">
-          </div>
-          <div class="font-nunito text-sm text-center">Сертифікат визнання вимірювальних можливостей</div>  
+  <section class="bg-white">
+    <div class="grid max-w-screen-xl px-6 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 items-center justify-center">
+      <div class="mr-auto place-self-center lg:col-span-7 font-nunito text-center">
+        <h1 class="max-w-2xl mb-10 text-gray-800 text-3xl font-semibold tracking-tight leading-none text-center">
+          <svg class="fill-gray-800 mr-1 h-7 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384v38.6C310.1 219.5 256 287.4 256 368c0 59.1 29.1 111.3 73.7 143.3c-3.2 .5-6.4 .7-9.7 .7H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM288 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm211.3-43.3c-6.2-6.2-16.4-6.2-22.6 0L416 385.4l-28.7-28.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l40 40c6.2 6.2 16.4 6.2 22.6 0l72-72c6.2-6.2 6.2-16.4 0-22.6z" />
+          </svg>
+          Дозвільні документи
+        </h1>
+        <p class="max-w-2xl mb-6 font-light text-gray-900 lg:mb-8 md:text-lg lg:text-xl text-center">
+          Лабораторія "Грін ПЛР Лаб" сертифікована за всіма критеріями відповідно до вимог та норм законодавства України. Усі аналізи виконуються виключно на приладах та устаткуванні, які пройшли метрологічну перевірку та відповідають усім вимогам та критеріям діагностичної лабораторії.
+        </p>
+        <a routerLink="/license" class="gradient-button-green inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
+          Переглянути документи
+        </a>
       </div>
+      <div class="lg:mt-0 lg:col-span-5 lg:flex mt-2 justify-center mx-auto px-20 flex-col items-center">
+        <img src="../../../assets/images/main/doc_certificate.png" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')">
+        <div class="font-nunito text-sm text-center md:text-lg mt-2 italic">
+          Сертифікат визнання вимірювальних можливостей
+        </div>
+      </div>
+    </div>
   </section>
+  
+  
   <hr>
 
 
