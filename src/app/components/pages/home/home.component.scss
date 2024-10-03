@@ -1,14 +1,12 @@
 
 .main-image {
-    // min-height: 300px; /* Минимальная высота изображения */
-    width: 100%; /* Изображение растягивается по ширине контейнера */
-    height: auto; /* Пропорционально изменяется высота */
+    width: 100%;
+    height: auto; 
     object-fit: cover;
     min-height: 90dvh;
     border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
     -webkit-border-radius: 0 0 30px 30px;
-    border: 0 solid #000000;
 }
 
 .gradient-button-green {
@@ -17,7 +15,6 @@
     text-decoration: none;
     display: inline-block;
     color: black;
-    padding: 20px 30px;
     margin: 10px 20px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +25,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: 0.5s;
 }
+
 .gradient-button-green:hover {
     background-position: right center;
 }
@@ -38,7 +36,6 @@
     text-decoration: none;
     display: inline-block;
     color: black;
-    padding: 20px 30px;
     margin: 10px 20px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -198,4 +195,9 @@
 }
 
 
+@media screen and (min-width: 1024px) {
+    .certificate img{
+        cursor: pointer;
 
+    }
+ }
