@@ -1,34 +1,131 @@
 <header class="navbar bg-white relative">
     <div class="md:container ml-2 mr-2">
-        <nav class="mx-auto flex max-w-7xl items-center space-x-10 justify-between p-2 md:mx-3 lg:px-8" aria-label="Global">
+        <nav class="mx-auto flex max-w-7xl items-center space-x-10 justify-between p-2 xl:p-0 lg:px-8 xl:max-w-screen-xl relative" aria-label="Global">
             <div class="flex lg:flex-1">
-                <a routerLink="/" class="-m-1.5 p-1.5 grid justify-items-center">
-                    <img class="h-8 w-auto md:h-14" src="../../../assets/images/logo.png" alt="logo">
-                    <div class="title-text text-slate-950 font-montserrat_alternates font-bold text-xs lg:text-sm lg:text-center">Green PCR Lab</div>
+                <a routerLink="/" class="m-1.5 p-2 flex flex-col lg:flex-row items-center">
+                    <img class="h-8 w-auto md:h-14 xl:h-10" src="../../../assets/images/logo.png" alt="logo">
+                    <div class="title-text text-slate-950 font-montserrat_alternates font-bold text-xs lg:text-sm lg:ml-2">Green PCR Lab</div>
                 </a>
             </div>
             <app-burger-menu></app-burger-menu>
-            <a routerLink="/"
-                class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Головна</a>
-            <a href="#" class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Правила збору
-                проб
-                <svg class="float-right w-5 h-3 mt-1.5 text-gray-800" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
-                </svg>
-            </a>
-            <a href="#" class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Послуги<svg
-                    class="float-right w-5 h-3 mt-1.5 text-gray-800" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
-                </svg></a>
-            <a routerLink="/guide" class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Як
-                здати
-                аналіз</a>
-            <a routerLink="/contact"
-                class="text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Контакти</a>
+            <a routerLink="/" class="nav-link text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Головна</a>
+            <div 
+                class="relative group" 
+                (mouseenter)="openDropdown('rules')"
+                (mouseleave)="closeDropdown('rules')"
+                (click)="toggleDropdown('rules'); $event.stopPropagation()">
+                    <a href="#" class="nav-link text-base font-montserrat_alternates font-semibold leading-6 text-gray-900 flex items-center group-hover:text-blue-600">
+                        Правила збору проб
+                        <svg class="ml-1 w-5 h-3 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+                        </svg>
+                    </a>
+            <ul *ngIf="dropdownStates['rules']" class="absolute left-0 font-montserrat_alternates font-semibold top-full min-w-fit text-gray-900 bg-white border-purple rounded-b-xl shadow-2xl">
+                    <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/preparation" class="block px-4 py-3 text-base hover:bg-gray-100">Підготовка тварини до аналізу</a></li>
+                    <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/rules" class="block px-4 py-3 text-base hover:bg-gray-100">Правила збіру проб</a></li>
+                    <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/marking" class="block px-4 py-3 text-base hover:bg-gray-100">Маркування проб</a></li>
+                    <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/materials" class="block px-4 py-3 text-base hover:bg-gray-100">Витратні матеріали</a></li>
+                    <li 
+                        class="relative group"
+                        (mouseenter)="openDropdown('rulesSub')"
+                        (mouseleave)="closeDropdown('rulesSub')"
+                        (click)="toggleDropdown('rulesSub'); $event.stopPropagation()">
+                        <a href="#" class="block px-4 py-3 mb-2 text-base hover:bg-gray-100 items-center group-hover:text-blue-600">
+                            Відбір
+                            <svg class="w-5 h-3 text-gray-800 inline-block ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+                            </svg>
+                        </a>
+                        <ul *ngIf="dropdownStates['rulesSub']" class="absolute left-full font-montserrat_alternates font-semibold -top-20 min-w-max text-gray-900 bg-white border-purple rounded-r-xl shadow-2xl">
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/blood-sampling" class="block px-4 py-3 text-base hover:bg-gray-100">Вибір крові</a></li>
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/conjunctiva-sampling" class="block px-4 py-3 text-base hover:bg-gray-100">Змив з кон’юнктиви</a></li>
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/nose-sampling" class="block px-4 py-3 text-base hover:bg-gray-100">Змив з носа</a></li>
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/vagina-sampling" class="block px-4 py-3 text-base hover:bg-gray-100">Зішкріб зі слизової урогенітального тракту, піхви</a></li>
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/rectal-sampling" class="block px-4 py-3 text-base hover:bg-gray-100">Зішкріб зі слизової прямої кишки</a></li>
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/oral-sampling" class="block px-4 py-3 text-base hover:bg-gray-100">Змив з ротової порожнини, глотки</a></li>
+                            <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/discharge-sampling" class="block px-4 py-3 mb-2 text-base hover:bg-gray-100">Відбір випоту (грудного, черевного)</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              
+
+                <div class="relative group" 
+                (mouseenter)="openDropdown('services')"
+                (mouseleave)="closeDropdown('services')"
+                (click)="toggleDropdown('services'); $event.stopPropagation()">
+               <a href="#" class="nav-link text-base font-montserrat_alternates font-semibold leading-6 text-gray-900 flex items-center group-hover:text-blue-600">
+                   Послуги
+                   <svg class="ml-1 w-5 h-3 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+                   </svg>
+               </a>
+               <ul *ngIf="dropdownStates['services']" class="absolute left-0 top-full font-montserrat_alternates font-semibold min-w-max text-gray-900 bg-white border-purple rounded-b-xl shadow-2xl">
+                   <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/info" class="block px-4 py-2 text-base hover:bg-gray-100">Шо таке ПЛР?</a></li>
+                   <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" href="../../../assets/files/price2024greenlab.pdf" target="_blank" class="block px-4 py-2 text-base hover:bg-gray-100">Прайс-лист</a></li>
+                   <li 
+                       class="relative group"
+                       (mouseenter)="openDropdown('diagnostics')"
+                       (mouseleave)="closeDropdown('diagnostics')"
+                       (click)="toggleDropdown('diagnostics'); $event.stopPropagation()">
+                       <a href="#" class="block px-4 py-2 text-base hover:bg-gray-100">
+                           Діагностика ПЛР
+                           <svg class="w-5 h-3 text-gray-800 inline-block ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+                           </svg>
+                       </a>
+                       <ul *ngIf="dropdownStates['diagnostics']" class="absolute left-full top-0 font-montserrat_alternates font-semibold min-w-max text-gray-900 bg-white border-purple rounded-r-xl shadow-2xl">
+                           <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/diagnostics-plr-cats" class="block px-4 py-3 text-base hover:bg-gray-100">Для котів</a></li>
+                           <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/diagnostics-plr-dogs" class="block px-4 py-3 text-base hover:bg-gray-100">Для собак</a></li>
+                           <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/diagnostics-plr-ferrets" class="block px-4 py-3 mb-2 text-base hover:bg-gray-100">Для тхорів</a></li>
+                       </ul>
+                   </li>
+                   <li 
+                       class="relative group"
+                       (mouseenter)="openDropdown('diagnosticPanels')"
+                       (mouseleave)="closeDropdown('diagnosticPanels')"
+                       (click)="toggleDropdown('diagnosticPanels'); $event.stopPropagation()">
+                       <a href="#" class="block px-4 py-2 text-base hover:bg-gray-100">
+                           Діагностичні панелі ПЛР
+                           <svg class="w-5 h-3 text-gray-800 inline-block ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+                           </svg>
+                       </a>
+                       <ul *ngIf="dropdownStates['diagnosticPanels']" class="absolute left-full bottom-0 font-montserrat_alternates font-semibold min-w-max text-gray-900 bg-white border-purple rounded-r-xl shadow-2xl">
+                           <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/diagnostics-panel-cats" class="block px-4 py-3 text-base hover:bg-gray-100">Для котів</a></li>
+                           <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/diagnostics-panel-dogs" class="block px-4 py-3 mb-2 text-base hover:bg-gray-100">Для собак</a></li>
+                       </ul>
+                   </li>
+                   <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/hormones" class="block px-4 py-2 text-base hover:bg-gray-100">Гормони</a></li>
+                   <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/genetics" class="block px-4 py-2 text-base hover:bg-gray-100">Генетичні дослідження</a></li>
+                   <li><a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/bacterium-research" class="block px-4 py-2 text-base hover:bg-gray-100">Бакпосів</a></li>
+                   <li 
+                        class="relative group"
+                        (mouseenter)="openDropdown('inflammationMarkers')"
+                        (mouseleave)="closeDropdown('inflammationMarkers')"
+                        (click)="toggleDropdown('inflammationMarkers'); $event.stopPropagation()">
+                        <a href="#" class="block px-4 py-2 mb-1 text-base hover:bg-gray-100">
+                            Маркери запалення <span class="text-red">(новинка)</span>
+                            <svg class="w-5 h-3 text-gray-800 inline-block ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+                            </svg>
+                        </a>
+                        <ul *ngIf="dropdownStates['inflammationMarkers']" 
+                            class="absolute left-full bottom-0 font-montserrat_alternates font-semibold min-w-max text-gray-900 bg-white border-purple rounded-r-xl shadow-2xl">
+                            <li>
+                                <a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/markers-cats" class="block px-4 py-3 text-base hover:bg-gray-100">Для котів</a>
+                            </li>
+                            <li>
+                                <a (click)="closeAllDropdowns(); $event.stopPropagation()" routerLink="/markers-dogs" class="block px-4 py-3 mb-2 text-base hover:bg-gray-100">Для собак</a>
+                            </li>
+                        </ul>
+                    </li>
+               </ul>
+           </div>
+
+            
+            <a routerLink="/guide" class="nav-link text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Як здати аналіз</a>
+            <a routerLink="/contact" class="nav-link text-base font-montserrat_alternates font-semibold leading-6 text-gray-900">Контакти</a>
         </nav>
     </div>
 </header>

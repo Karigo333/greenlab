@@ -1,4 +1,4 @@
-nav > a {
+nav a {
     font-size: 15px;
 }
 
@@ -6,9 +6,84 @@ header {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-
-  @media screen and (max-width: 1023px) {
-    nav > a {
+@media screen and (max-width: 1023px) {
+    nav a {
         display: none;
     }
-  }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        background-color: white; /* Фон для контраста */
+    }
+
+    .navbar nav {
+        position: relative; /* Для позиционирования псевдоэлемента относительно всего блока nav */
+    }
+
+    .navbar a.nav-link {
+        position: relative; /* Чтобы псевдоэлемент мог быть привязан к ссылке */
+        display: inline-flex;
+        align-items: center; /* Центрируем ссылки по вертикали */
+        justify-content: center;
+        padding: 30px 15px; /* Отступы вокруг ссылок */
+        text-decoration: none; /* Убираем стандартное подчеркивание */
+        height: 100%; /* Ссылка занимает всю высоту nav */
+    }
+
+    .navbar a.nav-link:hover {
+        color: #8120ff;
+    }
+
+    .navbar a.nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0; /* Линия располагается внизу блока nav */
+        left: 0;
+        right: 0;
+        height: 3px; /* Толщина линии */
+        background-color: #8120ff; /* Цвет линии */
+        transform: scaleX(0); /* Линия скрыта по умолчанию */
+        transition: transform 0.3s ease-in-out; /* Плавная анимация */
+    }
+
+    .navbar a.nav-link:hover::after {
+        transform: scaleX(1); /* Линия появляется при наведении */
+    }
+
+    .navbar ul > li > a:hover {
+        color: #8120ff;
+    }
+
+    /* Стили для выпадающих ссылок при наведении */
+    .navbar .group ul > li > a {
+        position: relative; /* Чтобы псевдоэлемент был позиционирован относительно ссылки */
+        padding-bottom: 5px; /* Отступ для более комфортного подчеркивания */
+        text-decoration: none; /* Убираем стандартное подчеркивание */
+    }
+
+    .navbar .group ul > li > a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        right: 5%;
+        height: 2px; /* Толщина линии */
+        background-color: #8120ff; /* Цвет линии */
+        transform: scaleX(0); /* Линия скрыта по умолчанию */
+        transition: transform 0.3s ease-in-out; /* Плавная анимация */
+    }
+
+    .navbar .group ul > li > a:hover::after {
+        transform: scaleX(1); /* Линия появляется при наведении */
+    }
+
+    .group:hover > ul {
+        display: block;
+    }
+}
+
+/* Make sure dropdown is hidden by default */
+.group ul {
+    display: none;
+}
