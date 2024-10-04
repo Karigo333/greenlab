@@ -198,6 +198,12 @@
 @media screen and (min-width: 1024px) {
     .certificate img{
         cursor: pointer;
-
     }
  }
+
+ @media screen and (min-width: 1924px) {
+    .certificate{
+        padding: 0 20% ;
+    }
+ }
+ 

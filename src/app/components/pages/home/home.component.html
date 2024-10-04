@@ -32,7 +32,7 @@
 
   <!-- About us -->
   <div class="container">
-    <div class="font-nunito text-base relative py-6 -mt-8 mb-5 bg-white rounded-3xl shadow-2xl drop-shadow-md md:mx-6 lg:mx-6 xl:mx-48 xl:px-10 ">
+    <div class="font-nunito text-base relative py-6 -mt-16 mb-5 bg-white rounded-3xl shadow-2xl drop-shadow-md sm:mx-12 xl:-mt-10 xl:mx-20 xl:px-10">
       <h2 class="text-center text-3xl pt-3 pb-6 text-gray-800 font-semibold">Про нас</h2>
       <h4 class="text-center font-bold pb-3 px-8">Універсальна ПЛР Лабораторія Green lab</h4>
       <p class="indent-6 px-6 xl:text-base">Універсальна лабораторія &ndash; це сучасний ветеринарний діагностичний центр, основний
@@ -64,7 +64,7 @@
   </div>
   <hr>
 
-  <div class="certificate my-6 flex flex-col items-center ml-4 font-nunito xl:flex-row">
+  <div class="certificate my-6 flex flex-col items-center ml-4 font-nunito lg:flex-row xl:px-52 2xl:px-64">
     <div class="m-4 text-center xl:text-left xl:w-1/3">
       <h2 class="text-xl font-semibold text-gray-800 py-5 lg:text-3xl text-center">Приклад результатів</h2>
       <div class="text-sm lg:text-xl xl:text-base text-center">
@@ -72,9 +72,9 @@
       </div>
     </div>
   
-    <div class="flex flex-wrap justify-center items-center gap-8 xl:flex-nowrap xl:w-2/3 xl:h-64">
+    <div class="flex flex-wrap justify-center items-center gap-8 xl:flex-nowrap lg:mt-5 lg:w-2/3 xl:h-64">
       <div class="flex flex-col items-center xl:h-40 xl:justify-center">
-        <img id="myImg1" src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" 
+        <img id="myImg1" class="min-h-full" src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" 
              (click)="openModal('../../../assets/images/main/cert1.png', 'Електронний — відправляємо на електронну адресу.')">
         <div class="text-sm lg:text-lg text-center mt-2 px-10 xl:px-0 italic xl:text-sm">Електронний — відправляємо на електронну адресу.</div>
       </div>
@@ -105,7 +105,7 @@
       Контакти
     </h2>
       <div class="content">
-        <div class="flex flex-col md:flex-row flex-wrap place-content-center text-center space-y-8 md:space-y-0 md:space-x-8 xl:space-x-32">
+        <div class="flex flex-col md:flex-row flex-wrap place-content-center text-center space-y-8 md:space-y-0 md:space-x-8 xl:space-x-56">
           <div class="address-contacts">
             <svg class="w-6 inline py-1 fill-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z" />
@@ -160,7 +160,7 @@
         </a>
       </div>
       <div class="lg:mt-0 lg:col-span-5 lg:flex mt-2 justify-center mx-auto px-20 flex-col items-center">
-        <img src="../../../assets/images/main/doc_certificate.png" class="w-40 cursor-pointer" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')">
+        <img src="../../../assets/images/main/doc_certificate.png" class="w-40 cursor-pointer mx-auto" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')">
         <div class="font-nunito text-sm text-center md:text-lg mt-2 italic xl:text-sm">
           Сертифікат визнання вимірювальних можливостей
         </div>
