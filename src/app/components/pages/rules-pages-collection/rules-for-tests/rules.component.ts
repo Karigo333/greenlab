@@ -11,8 +11,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './rules.component.html',
-    styleUrl: './rules.component.scss'
+    templateUrl: './rules.component.html'
+
 })
 
 export class RulesComponent {

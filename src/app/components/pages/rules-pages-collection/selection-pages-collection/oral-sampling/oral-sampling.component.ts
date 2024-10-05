@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './oral-sampling.component.html',
-    styleUrl: './oral-sampling.component.scss'
+    templateUrl: './oral-sampling.component.html'
 })
 
 export class OralSamplingComponent {

@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './materials.component.html',
-    styleUrl: './materials.component.scss'
+    templateUrl: './materials.component.html'
 })
 
 export class MaterialsComponent {

@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './nose-sampling.component.html',
-    styleUrl: './nose-sampling.component.scss'
+    templateUrl: './nose-sampling.component.html'
 })
 
 export class NoseSamplingComponent {

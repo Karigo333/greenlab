@@ -19,7 +19,7 @@ module.exports = {
       'gray-300': '#e0e0e0',
       'gray-800': '#6c757d',
       'gray-900': '#111827',
-      'blue': '0000ff',
+      'blue': '#0000ff',
       'light-green': '#35fd7b',
       'sky': '#3e2093',
       'red': '#910000',

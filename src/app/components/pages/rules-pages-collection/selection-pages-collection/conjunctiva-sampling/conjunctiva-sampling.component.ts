@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './conjunctiva-sampling.component.html',
-    styleUrl: './conjunctiva-sampling.component.scss'
+    templateUrl: './conjunctiva-sampling.component.html'
 })
 
 export class ConjunctivaSamplingComponent {

@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './blood-sampling.component.html',
-    styleUrl: './blood-sampling.component.scss'
+    templateUrl: './blood-sampling.component.html'
 })
 
 export class BloodSamplingComponent {

@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './marking.component.html',
-    styleUrl: './marking.component.scss'
+    templateUrl: './marking.component.html'
 })
 
 export class MarkingComponent {

@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './preparation.component.html',
-    styleUrl: './preparation.component.scss'
+    templateUrl: './preparation.component.html'
 })
 
 export class PreparationComponent {

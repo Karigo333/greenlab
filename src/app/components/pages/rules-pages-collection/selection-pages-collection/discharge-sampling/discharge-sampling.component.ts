@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './discharge-sampling.component.html',
-    styleUrl: './discharge-sampling.component.scss'
+    templateUrl: './discharge-sampling.component.html'
 })
 
 export class DischargeSamplingComponent {

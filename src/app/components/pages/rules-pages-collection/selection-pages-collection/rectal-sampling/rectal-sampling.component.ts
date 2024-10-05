@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './rectal-sampling.component.html',
-    styleUrl: './rectal-sampling.component.scss'
+    templateUrl: './rectal-sampling.component.html'
 })
 
 export class RectalSamplingComponent {

@@ -11,8 +11,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         RouterLink,
         RouterLinkActive
     ],
-    templateUrl: './vagina-sampling.component.html',
-    styleUrl: './vagina-sampling.component.scss'
+    templateUrl: './vagina-sampling.component.html'
 })
 
 export class VaginaSamplingComponent {
