@@ -1,6 +1,6 @@
-<div class="slideshow-container">
+<div class="slideshow-container w-full xl:w-1/2">
   <div *ngFor="let image of images; let i = index" #mySlides class="mySlides fade">
-    <a [href]="image" target="_blank"><img [src]="image" alt="Image" style="width:100%"></a>
+    <a [href]="image" class="w-full" target="_blank"><img [src]="image" alt="Image"></a>
   </div>
 
   <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
