@@ -6,7 +6,7 @@ header {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1047px) {
 
 
     a:not(.header-image) {
@@ -17,7 +17,7 @@ header {
     } 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1048px) {
     .navbar {
         background-color: white; /* Фон для контраста */
     }

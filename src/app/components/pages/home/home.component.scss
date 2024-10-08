@@ -117,24 +117,6 @@
     object-fit: contain;  /* Обеспечивает сохранение пропорций изображений */
 }
 
-/* Убедитесь, что родительский элемент имеет достаточную ширину */
-// @media (min-width: 1280px) {
-//     .certificate {
-//         max-width: 100%;
-//     }
-// }
-
-// @media(min-height:1187px) and (max-height:1800px) {
-//     .main-image {
-//         min-height: 150dvh;
-//     }
-// }
-
-// @media (max-width: 1280px) {
-//     .main-image {
-//         min-height: 86dvh;
-//     }
-// }
 
 .modal {
     display: none;

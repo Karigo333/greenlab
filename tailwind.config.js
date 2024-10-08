@@ -8,7 +8,7 @@ module.exports = {
       'ss': '340px', // Добавляем ss в общий раздел screens
       'sm': '640px',
       'md': '768px',
-      'lg': '1024px',
+      'lg': '1048px',
       'xl': '1280px',
       '2xl': '1536px',
     },

@@ -71,18 +71,22 @@
         Результати відправляємо на e-mail адресу, а також по пошті на вказаний в бланці адресу.
       </div>
     </div>
-  
     <div class="flex flex-wrap justify-center items-center gap-8 xl:flex-nowrap lg:mt-5 lg:w-2/3 xl:h-64">
       <div class="flex flex-col items-center xl:h-40 xl:justify-center">
-        <img id="myImg1" class="min-h-full" src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" 
+        <img id="myImg1" class="min-h-full transform transition-transform duration-300 hover:scale-105" 
+             src="../../../assets/images/main/cert1.png" alt="Сертифікат №1" 
              (click)="openModal('../../../assets/images/main/cert1.png', 'Електронний — відправляємо на електронну адресу.')">
-        <div class="text-sm lg:text-lg text-center mt-2 px-10 xl:px-0 italic xl:text-sm">Електронний — відправляємо на електронну адресу.</div>
+        <div class="text-sm lg:text-lg text-center mt-2 px-10 xl:px-0 italic xl:text-sm">
+          Електронний — відправляємо на електронну адресу.
+        </div>
       </div>
-  
       <div class="flex flex-col items-center xl:h-40 xl:justify-center">
-        <img id="myImg2" src="../../../assets/images/main/cert2.png" alt="Сертифікат №2" 
+        <img id="myImg2" class="transform transition-transform duration-300 hover:scale-105"
+             src="../../../assets/images/main/cert2.png" alt="Сертифікат №2" 
              (click)="openModal('../../../assets/images/main/cert2.png', 'Друкований (замовляється окремо) — з мокрою печаткою, англійською мовою, відправляється поштою.')">
-        <div class="text-sm lg:text-lg text-center mt-2 px-10 xl:px-0 italic mb-3 xl:text-sm xl:text-center w-3/4">Друкований (замовляється окремо) — з мокрою печаткою, англійською мовою, відправляється поштою.</div>
+        <div class="text-sm lg:text-lg text-center mt-2 px-10 xl:px-0 italic mb-3 xl:text-sm xl:text-center w-3/4">
+          Друкований (замовляється окремо) — з мокрою печаткою, англійською мовою, відправляється поштою.
+        </div>
       </div>
     </div>
   
@@ -91,6 +95,7 @@
       <div id="caption">{{ modalCaption }}</div>
     </div>
   </div>
+  
   
   
   <hr>
@@ -160,7 +165,10 @@
         </a>
       </div>
       <div class="lg:mt-0 lg:col-span-5 lg:flex mt-2 justify-center mx-auto px-20 flex-col items-center">
-        <img src="../../../assets/images/main/doc_certificate.png" class="w-40 cursor-pointer mx-auto" alt="Сертифікат №2" (click)="openModal('../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')">
+        <img src="../../../assets/images/main/doc_certificate.png" 
+             class="w-40 cursor-pointer mx-auto transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" 
+             alt="Сертифікат №2" 
+             (click)="openModal('../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')">
         <div class="font-nunito text-sm text-center md:text-lg mt-2 italic xl:text-sm">
           Сертифікат визнання вимірювальних можливостей
         </div>
