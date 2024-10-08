@@ -4,6 +4,14 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    screens: {
+      'ss': '340px', // Добавляем ss в общий раздел screens
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -22,7 +30,7 @@ module.exports = {
       'blue': '#0000ff',
       'light-green': '#35fd7b',
       'sky': '#3e2093',
-      'red': '#910000',
+      'red': '#ff1818',
       'violet': '#8120ff',
     },
     backgroundImage: {
@@ -36,29 +44,17 @@ module.exports = {
       jost: ['Jost'],
     },
     container: {
-      screens: {
-        "ss": '340px',
-        // => @media (min-width: 300px) { ... }
-
-        'sm': '640px',
-        // => @media (min-width: 640px) { ... }
-  
-        'md': '768px',
-        // => @media (min-width: 768px) { ... }
-  
-        'lg': '1024px',
-        // => @media (min-width: 1024px) { ... }
-  
-        'xl': '1280px',
-        // => @media (min-width: 1280px) { ... }
-  
-        '2xl': '1536px',
-        // => @media (min-width: 1536px) { ... }
-      },
       center: true,
-
+      screens: {
+        'ss': '340px',  // Это тоже можно оставить для контейнера
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
     },
     extend: {},
   },
   plugins: [],
-} 
+}

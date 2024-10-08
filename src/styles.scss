@@ -185,22 +185,26 @@ hr {
     background: #7b1fa2;
 }
 
+/* Основные стили для таблицы */
 table {
     width: 100%;
-    margin: 2rem 0 2rem 0;
+    border-collapse: collapse;
+    font-size: 0.875rem; /* Уменьшенный шрифт */
+    margin: 1rem 0;
+    margin-bottom: 20px;
     border: 5px solid #fff;
     border-top: 5px solid #fff;
     border-bottom: 3px solid #fff;
     border-collapse: collapse;
     outline: 3px solid #C1D8C3;
-    font-size: 0.75rem;
-    background: #fff !important;
+    background: #fff!important;
 }
 
+/* Стили для заголовков */
 table th {
-    font-weight: bold;
-    padding: 0.75rem;
+    padding: 0.5rem;
     background: #C1D8C3;
+    font-size: 0.9rem;
     border: none;
     text-align: center;
     font-size: 1rem;
@@ -208,23 +212,39 @@ table th {
     border-bottom: 3px solid #C1D8C3;
 }
 
+/* Стили для ячеек */
 table td {
-    padding: 10px;
+    padding: 0.5rem;
     border: none;
     text-align: center;
     border-top: 3px solid #fff;
     border-bottom: 3px solid #fff;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
+/* Чередование цвета строк */
 table tbody tr:nth-child(even) {
-    background: #ebedf7 !important;
+    background: #ebedf7;
 }
 
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.75rem; /* Уменьшение шрифта на мобильных устройствах */
+    }
+
+    table th, table td {
+        padding: 0.25rem; /* Уменьшение отступов */
+    }
+
+    table th {
+        font-size: 0.85rem; /* Уменьшение шрифта в заголовках */
+    }
+}
 
 
 // @import "../stylesheets/scss-file";
 
 
-html, body { height: 100%;  }
+html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

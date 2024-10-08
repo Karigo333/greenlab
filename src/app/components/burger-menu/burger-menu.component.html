@@ -4,8 +4,8 @@
     <div class="bar"></div>
     <div class="bar"></div>
   </div>
-  <div *ngIf="isOpen" class="menu-overlay" (click)="closeMenu()"></div>
-  <div *ngIf="isOpen" class="menu font-nunito md:text-2xl md:leading-loose lg:text-2xl lg:leading-loose">
+  <div *ngIf="isOpen" class="menu-overlay " (click)="closeMenu()"></div>
+  <div *ngIf="isOpen" class="menu font-nunito md:text-2xl md:leading-loose lg:text-2xl lg:leading-loose min-w-full">
     <hr />
     <ul>
       <li><a (click)="closeMenu()" routerLink="/">Головна </a></li>
