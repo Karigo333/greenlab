@@ -30,8 +30,8 @@ import { PriceComponent } from './components/pages/price/price.component';
 
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent},
-    { path: 'contact', component: ContactComponent },
+    { path: '', component: HomeComponent, data: { title: 'Головна сторінка' }},
+    { path: 'contact', component: ContactComponent, data: { title: 'Контакти' }},
     { path: 'guide', component: GuideComponent },
     { path: 'preparation', component: PreparationComponent},
     { path: 'rules', component: RulesComponent},
