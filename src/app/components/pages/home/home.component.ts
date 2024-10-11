@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home-component',
@@ -15,7 +17,17 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  title = 'home';
+  title = 'Головна сторінка';
+
+  constructor(private titleService: Title) {}
+
+  ngOnInit() {
+      this.setTitle(this.title + ' - GreenLab');
+  }
+
+  setTitle(newTitle: string) {
+      this.titleService.setTitle(newTitle);
+  }
 
   modalOpen = false;
   modalImageUrl = '';
