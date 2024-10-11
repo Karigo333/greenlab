@@ -32,6 +32,7 @@ module.exports = {
       'sky': '#3e2093',
       'red': '#ff1818',
       'violet': '#8120ff',
+      'dark-red': '#C41E3A',
     },
     backgroundImage: {
       'main-image': "url('../src/assets/images/main/background.jpg')",
