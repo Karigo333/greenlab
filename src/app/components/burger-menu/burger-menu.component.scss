@@ -30,16 +30,18 @@
   .menu {
     position: absolute;
     top: 100%;
-    left: 0;   
+    left: 0;
     text-align: center;
-    width: 100%; 
-    height: 90dvh;
+    width: 100%;
+    height: 90svh; /* С учетом видимых панелей */
+    max-height: 90lvh; /* Высота без панелей */
     background: #fff;
     z-index: 2;
     transform: translateX(-150%);
     animation: ani 0.5s forwards;
-    overflow-y: scroll;
-  }
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Обеспечивает плавный скролл на iOS */
+}
 
   @keyframes ani {
     0% {transform: translateX(-150%);}

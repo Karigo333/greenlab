@@ -1,9 +1,10 @@
 
 .main-image {
     width: 100%;
-    height: auto; 
+    height: auto;
     object-fit: cover;
-    min-height: 90dvh;
+    min-height: 90svh; /* Высота с учетом видимых панелей */
+    height: 90lvh;     /* Высота без видимых панелей */
     border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
     -webkit-border-radius: 0 0 30px 30px;
