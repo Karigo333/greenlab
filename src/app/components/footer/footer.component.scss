@@ -1,3 +1,274 @@
-.footer-link > li {
+.footer-link>li {
     margin: 5% 0 5% 0;
+}
+
+footer {
+    position: relative;
+    overflow-x: visible;
+}
+
+#box {
+    position: absolute;
+    top: -39%;
+    left: 85%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.cat * {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cat,
+.ears,
+.eyes,
+.muzzle,
+.body,
+.paw,
+.tail,
+.tail-segment {
+    position: relative;
+}
+
+.head,
+.body,
+.paw,
+.tail-segment {
+    background-color: #000000;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.cat {
+    margin-top: 1.5625rem;
+    /* 50px / 2 / 16 */
+    animation: purr 5s infinite cubic-bezier(0, .75, 1, .25);
+}
+
+.head {
+    width: 3.125rem;
+    /* 100px / 2 / 16 */
+    height: 2.8125rem;
+    /* 90px / 2 / 16 */
+    border-radius: 50%;
+    z-index: 100;
+    animation: head-bob 5s infinite ease-in-out;
+}
+
+.ears {
+    top: -0.625rem;
+    /* 20px / 2 / 16 */
+    z-index: -100;
+}
+
+.ear {
+    width: 0;
+    height: 0;
+    border-left: 0.78125rem solid transparent;
+    /* 25px / 2 / 16 */
+    border-right: 0.78125rem solid transparent;
+    border-bottom: 1.5625rem solid #000000;
+    /* 50px / 2 / 16 */
+}
+
+.ear.left {
+    transform: rotate(-20deg) translateX(-0.3125rem);
+    /* 10px / 2 / 16 */
+}
+
+.ear.right {
+    transform: rotate(20deg) translateX(0.3125rem);
+    /* 10px / 2 / 16 */
+}
+
+.eyes {
+    top: -0.5625rem;
+    /* 18px / 2 / 16 */
+    width: 50%;
+}
+
+.eye {
+    width: 0.5rem;
+    /* 16px / 2 / 16 */
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #ffeb7b;
+    animation: eye-blink 5s infinite;
+    text-align: center;
+}
+
+.muzzle {
+    top: 1.6rem;
+    /* 50px / 2 / 16 */
+}
+
+
+.nose::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 5px;
+    background-color: #CC6666;
+    /* Same color as the nose */
+    border-radius: 50%;
+    /* Rounded bottom */
+}
+
+.body {
+    width: 6.25rem;
+    /* 200px / 2 / 16 */
+    height: 3.75rem;
+    /* 120px / 2 / 16 */
+    border-top-left-radius: 12.5rem;
+    /* 200px / 2 / 16 */
+    border-top-right-radius: 12.5rem;
+    top: -2.34375rem;
+    /* 75px / 2 / 16 */
+    left: 2.8125rem;
+    /* 90px / 2 / 16 */
+    z-index: -10;
+}
+
+.paw {
+    height: 0.9375rem;
+    /* 30px / 2 / 16 */
+    width: 1.5625rem;
+    /* 50px / 2 / 16 */
+    border-radius: 1.5625rem;
+    /* 25px / 2 / 16 */
+    left: -3.125rem;
+    /* 100px / 2 / 16 */
+    top: 2.8125rem;
+    /* 90px / 2 / 16 */
+}
+
+.tail {
+    left: 5.625rem;
+    /* 180px / 2 / 16 */
+    top: -3.125rem;
+    /* 100px / 2 / 16 */
+    transform: rotate(90deg);
+}
+
+.tail-segment {
+    height: 0.625rem;
+    /* 20px / 2 / 16 */
+    width: 0.625rem;
+    border-radius: 1.5625rem;
+    /* 25px / 2 / 16 */
+    top: 0;
+    left: 0.3125rem;
+    /* 10px / 2 / 16 */
+    animation: tail-swish 5s infinite cubic-bezier(.8, 0, .2, 1);
+    background-color: black;
+    /* Set the default color to black */
+}
+
+/* Set the last tail segment to white using the specific class */
+.tail-segment.last-segment {
+    background-color: rgb(151, 151, 151);
+    /* Change last segment to white */
+}
+
+
+@keyframes tail-swish {
+    0% {
+        transform: rotate(12deg);
+    }
+
+    10% {
+        transform: rotate(12deg);
+    }
+
+    40% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(12deg);
+    }
+}
+
+@keyframes head-bob {
+    0% {
+        transform: translateX(-0.9rem) translateY(1.5rem);
+    }
+
+    /* 15px, 45px */
+    10% {
+        transform: translateX(-0.9rem) translateY(1.5rem);
+    }
+
+    30% {
+        transform: translateX(0) translateY(0);
+    }
+
+    75% {
+        transform: translateX(0) translateY(0);
+    }
+
+    90% {
+        transform: translateX(-0.9rem) translateY(1.5rem);
+    }
+
+    100% {
+        transform: translateX(-0.9rem) translateY(1.5rem);
+    }
+}
+
+@keyframes eye-blink {
+    0% {
+        transform: scaleY(0);
+    }
+
+    10% {
+        transform: scaleY(0);
+    }
+
+    15% {
+        transform: scaleY(1);
+    }
+
+    48% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0);
+    }
+
+    52% {
+        transform: scaleY(1);
+    }
+
+    90% {
+        transform: scaleY(1);
+    }
+
+    95% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(0);
+    }
 }
