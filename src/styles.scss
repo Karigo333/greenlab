@@ -21,11 +21,11 @@ $greenlab-warn: mat.define-palette(mat.$red-palette);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $greenlab-theme: mat.define-light-theme((
-  color: (
+    color: (
     primary: $greenlab-primary,
     accent: $greenlab-accent,
     warn: $greenlab-warn,
-  )
+    )
 ));
 
 // Include theme styles for core and each component used in your app.
@@ -117,8 +117,8 @@ meter {
 }
 
 /* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly.
-   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+    - fix for the content editable attribute will work properly.
+    - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
 :where([contenteditable]:not([contenteditable="false"])) {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
@@ -159,7 +159,7 @@ hr {
 .list-counter-circle li {
     position: relative;
     line-height: 2rem;
-    margin-left: 1.75rem;
+    margin-left: 3rem;
     margin-bottom: .25rem;
     padding-left: 1rem;
     padding-right: .5rem;
@@ -227,18 +227,18 @@ table tbody tr:nth-child(even) {
     background: #ebedf7;
 }
 
-/* Адаптивные стили для мобильных устройств */
+
 @media (max-width: 768px) {
     table {
-        font-size: 0.75rem; /* Уменьшение шрифта на мобильных устройствах */
+        font-size: 0.75rem;
     }
 
     table th, table td {
-        padding: 0.25rem; /* Уменьшение отступов */
+        padding: 0.25rem;
     }
 
     table th {
-        font-size: 0.85rem; /* Уменьшение шрифта в заголовках */
+        font-size: 0.85rem;
     }
 }
 
