@@ -3,8 +3,8 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    min-height: 90svh; /* Высота с учетом видимых панелей */
-    height: 90lvh;     /* Высота без видимых панелей */
+    min-height: 100svh; /* Высота с учетом видимых панелей */
+    // height: 90lvh;     /* Высота без видимых панелей */
     border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
     -webkit-border-radius: 0 0 30px 30px;
