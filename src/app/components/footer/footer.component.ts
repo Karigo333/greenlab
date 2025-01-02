@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { CatAnimationComponent } from '../cat-animation/cat-animation.component';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,8 @@ import { RouterOutlet, Router, RouterLink, RouterLinkActive } from '@angular/rou
     CommonModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    CatAnimationComponent
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
