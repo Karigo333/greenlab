@@ -8,7 +8,6 @@ import { CatAnimationComponent } from '../cat-animation/cat-animation.component'
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
     RouterLink,
     RouterLinkActive,
     CatAnimationComponent
