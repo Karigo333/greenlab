@@ -26,6 +26,7 @@ import { BacteriumComponent } from './components/pages/services-pages-collection
 import { MarkerCatsComponent } from './components/pages/services-pages-collection/marker-pages/marker-cats/marker-cats.component';
 import { MarkerDogsComponent } from './components/pages/services-pages-collection/marker-pages/marker-dogs/marker-dogs.component';
 import { LicenseComponent } from './components/pages/license/license.component';
+import { NewsItemComponent } from './components/pages/news-item/news-item.component';
 
 
 export const routes: Routes = [
@@ -55,6 +56,7 @@ export const routes: Routes = [
     { path: 'markers-cats', component: MarkerCatsComponent},
     { path: 'markers-dogs', component: MarkerDogsComponent},
     { path: 'license', component: LicenseComponent},
+    { path: 'news-page', component: NewsItemComponent},
 
     { path: '**', component: NotFoundComponent}
 ];
