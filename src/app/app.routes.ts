@@ -56,7 +56,7 @@ export const routes: Routes = [
     { path: 'markers-cats', component: MarkerCatsComponent},
     { path: 'markers-dogs', component: MarkerDogsComponent},
     { path: 'license', component: LicenseComponent},
-    { path: 'news-page', component: NewsItemComponent},
+    { path: 'news-page/:id', component: NewsItemComponent},
 
     { path: '**', component: NotFoundComponent}
 ];

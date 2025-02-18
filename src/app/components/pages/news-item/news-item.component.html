@@ -37,3 +37,18 @@
             </ul>
     </div>
 </div>
+
+<div class="container font-nunito text-lg sm:px-6 xl:px-80">
+    <div class="flex flex-wrap justify-center xl:mb-10">
+      <h2 class="text-center text-3xl pt-8 pb-3 text-gray-800 font-semibold">
+        {{ post?.title }}
+      </h2>
+    </div>
+    <div class="flex flex-wrap justify-between sm:mb-10">
+      <div class="my-10 text-base md:text-lg md:leading-relaxed md:mb-8 xl:text-base">
+        <p><b>{{ post?.title }}</b> – {{ post?.content }}</p>
+        <p class="font-semibold">Теги: {{ post?.tag }}</p>
+        <!-- Добавьте остальной контент по аналогии -->
+      </div>
+    </div>
+  </div>
