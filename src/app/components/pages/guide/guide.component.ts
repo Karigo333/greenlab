@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,9 +8,7 @@ import { Title } from '@angular/platform-browser';
     standalone: true,
     imports: [
         CommonModule,
-        RouterOutlet,
         RouterLink,
-        RouterLinkActive
     ],
     templateUrl: './guide.component.html',
     styleUrl: './guide.component.scss'

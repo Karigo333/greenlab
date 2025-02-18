@@ -9,9 +9,7 @@ import { Title } from '@angular/platform-browser';
     standalone: true,
     imports: [
         CommonModule,
-        RouterOutlet,
         RouterLink,
-        RouterLinkActive
     ],
     templateUrl: './materials.component.html'
 })
