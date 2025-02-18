@@ -4,7 +4,7 @@ const app = express();
 
 // Подключение к базе данных
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || 'mysql',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || 'root',
     database: process.env.DB_NAME || 'greenlab'
@@ -24,11 +24,14 @@ app.get('/posts', (req, res) => {
     db.query('SELECT * FROM posts', (err, results) => {
         if (err) {
             res.status(500).send('Ошибка при запросе данных');
+        } else {
+            res.json(results);
         }
-        res.json(results);
     });
 });
 
-app.listen(3000, () => {
-    console.log('Бэкенд работает на порту 3000');
+// Запуск сервера
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Бэкенд работает на порту ${PORT}`);
 });

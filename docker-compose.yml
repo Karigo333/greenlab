@@ -9,9 +9,13 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: greenlab
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
 
   backend:
     build: ./backend
@@ -20,7 +24,7 @@ services:
     depends_on:
       - mysql
     environment:
-      DB_HOST: localhost
+      DB_HOST: mysql
       DB_USER: root
       DB_PASSWORD: root
       DB_NAME: greenlab

@@ -8,7 +8,7 @@ RUN rm -rf /etc/nginx/conf.d
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Копируем скомпилированный фронтенд в директорию для Nginx
-COPY dist/greenlab /usr/share/nginx/html
+COPY dist/greenlab/browser /usr/share/nginx/html
 
 # Открываем порт 80 для доступа к приложению
 EXPOSE 80
