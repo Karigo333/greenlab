@@ -11,16 +11,16 @@
 }
 
 .gradient-button-green {
-    font-size: 15px;
+    font-size: 0.7rem;
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
     color: black;
-    margin: 10px 20px;
+    margin: 8px 10px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     background-image: linear-gradient(to right, #9EEFE1 0%, #00ff7f 51%, #9EEFE1 100%);
     background-size: 200% auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
@@ -32,16 +32,16 @@
 }
 
 .gradient-button-blue {
-    font-size: 15px;
+    font-size: 0.7rem;
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
     color: black;
-    margin: 10px 20px;
+    margin: 8px 10px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     background-image: linear-gradient(to right, #b5bbff 0%, #24a5ff 51%, #7d93ff 100%);
     background-size: 200% auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);

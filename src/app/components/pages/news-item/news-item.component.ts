@@ -16,26 +16,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class NewsItemComponent implements OnInit {
 
-  post: any;  // Для хранения данных поста
-  postId: number = 0;
-
-  constructor(
-    private newsService: NewsService,
-    private route: ActivatedRoute
-  ) { }
-
-  ngOnInit(): void {
-    // Получаем id из маршрута
-    this.route.params.subscribe(params => {
-      this.postId = +params['id'];  // Преобразуем id в число
-      this.getPost();  // Получаем данные поста
-    });
-  }
-
-  // Метод для получения данных поста
-  getPost(): void {
-    this.newsService.getPostById(this.postId).subscribe((data) => {
-      this.post = data;  // Сохраняем полученные данные в переменную
-    });
-  }
+  
 }
