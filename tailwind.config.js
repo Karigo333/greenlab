@@ -52,7 +52,7 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        'ss': '340px',  // Это тоже можно оставить для контейнера
+        'ss': '340px', 
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
