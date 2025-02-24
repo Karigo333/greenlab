@@ -20,11 +20,11 @@ export class OralSamplingComponent {
     title = 'Змив з ротової порожнини, глотки';
     
     constructor(private titleService: Title) {}
-  
+
     ngOnInit() {
         this.setTitle(this.title + ' - GreenLab');
     }
-  
+
     setTitle(newTitle: string) {
         this.titleService.setTitle(newTitle);
     }

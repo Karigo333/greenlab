@@ -1,11 +1,5 @@
-ul {
-    list-style: none;
-    counter-reset: list;
-    overflow: inherit;
-}
 
 ul li {
-    // position: relative;
     line-height: 2rem;
     margin-left: 2rem;
     margin-bottom: .25rem;
@@ -19,4 +13,9 @@ ul>li:last-child {
 
 p {
     margin: 10px 0;
+}
+
+span {
+    display: inline-block;
+    transform: scale(1.5);
 }

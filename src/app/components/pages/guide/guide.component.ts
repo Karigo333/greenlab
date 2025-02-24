@@ -11,7 +11,6 @@ import { Title } from '@angular/platform-browser';
         RouterLink,
     ],
     templateUrl: './guide.component.html',
-    styleUrl: './guide.component.scss'
 })
 
 export class GuideComponent {

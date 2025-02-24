@@ -19,11 +19,11 @@ import { Title } from '@angular/platform-browser';
 export class RectalSamplingComponent {
     title = 'Зішкріб зі слизової прямої кишки';
     constructor(private titleService: Title) {}
-  
+
     ngOnInit() {
         this.setTitle(this.title + ' - GreenLab');
     }
-  
+
     setTitle(newTitle: string) {
         this.titleService.setTitle(newTitle);
     }

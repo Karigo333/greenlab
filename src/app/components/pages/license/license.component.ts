@@ -16,18 +16,15 @@ import { Title } from '@angular/platform-browser';
         SlideshowComponent
     ],
     templateUrl: './license.component.html',
-    styleUrl: './license.component.scss'
 })
 
 export class LicenseComponent {
     title = 'Дозвільні документи';
 
     constructor(private titleService: Title) {}
-  
     ngOnInit() {
         this.setTitle(this.title + ' - GreenLab');
     }
-  
     setTitle(newTitle: string) {
         this.titleService.setTitle(newTitle);
     }

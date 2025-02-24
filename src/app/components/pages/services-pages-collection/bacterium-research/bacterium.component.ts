@@ -13,7 +13,6 @@ import { Title } from '@angular/platform-browser';
         RouterLinkActive
     ],
     templateUrl: './bacterium.component.html',
-    styleUrl: './bacterium.component.scss'
 })
 
 export class BacteriumComponent {

@@ -10,52 +10,6 @@
     -webkit-border-radius: 0 0 30px 30px;
 }
 
-.gradient-button-green {
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    margin: 8px 10px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-image: linear-gradient(to right, #9EEFE1 0%, #00ff7f 51%, #9EEFE1 100%);
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    transition: 0.5s;
-}
-
-.gradient-button-green:hover {
-    background-position: right center;
-}
-
-.gradient-button-blue {
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    margin: 8px 10px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-image: linear-gradient(to right, #b5bbff 0%, #24a5ff 51%, #7d93ff 100%);
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    transition: 0.5s;
-}
-.gradient-button-blue:hover {
-    background-position: right center;
-}
-
-// .worktime {
-//     background-color: rgba(153,156,156,0.29);
-//     border-radius: 25px;
-// }
-
 .arrow-down {
     margin-top: 10%;
     padding-left: 50%;
