@@ -11,7 +11,6 @@ import { Title } from '@angular/platform-browser';
         RouterOutlet
     ],
     templateUrl: './contact.component.html',
-    styleUrl: './contact.component.scss'
 })
 
 export class ContactComponent {

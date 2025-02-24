@@ -20,11 +20,11 @@ export class DischargeSamplingComponent {
     title = 'Відбір випоту (грудного, черевного)';
     
     constructor(private titleService: Title) {}
-  
+
     ngOnInit() {
         this.setTitle(this.title + ' - GreenLab');
     }
-  
+
     setTitle(newTitle: string) {
         this.titleService.setTitle(newTitle);
     }
