@@ -7,8 +7,9 @@ import { Title } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-news-item',
-  templateUrl: './news-item.component.html',
+    selector: 'app-news-item',
+    templateUrl: './news-item.component.html',
+    styleUrl: './news-item.component.scss',
 })
 export class NewsItemComponent {
 
@@ -23,5 +24,4 @@ export class NewsItemComponent {
     setTitle(newTitle: string) {
         this.titleService.setTitle(newTitle);
     }
-  
 }
