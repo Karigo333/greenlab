@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, Output, EventEmitter, OnInit, Inject, PLATFORM_ID, HostListener, AfterViewInit, ElementRef } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -16,10 +16,10 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   title = 'Головна сторінка';
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
       this.setTitle(this.title + ' - GreenLab');
@@ -43,5 +43,23 @@ export class HomeComponent {
   closeModal() {
     this.modalOpen = false;
   }
+
+  
+  isVisible = false;
+
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          this.isVisible = true;
+          observer.disconnect();
+        }
+      }, { threshold: 0.5 });
+
+      observer.observe(this.el.nativeElement.querySelector('.box'));
+    }
+  }
+
+
   
 }
