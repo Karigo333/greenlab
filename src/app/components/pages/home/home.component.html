@@ -1,12 +1,12 @@
 <div>
   <section class="main-image bg-center bg-no-repeat bg-main-image bg-blend-multiply sm:bg-cover">
-    <div class="mx-auto max-w-screen-xl text-center pt-14 pb-0">
-      <h2 class="brand mb-4 mt-4 text-6xl font-nunito font-normal tracking-tight leading-none text-white md:text-7xl md:mt-8 lg:text-8xl ">
+    <div class="mx-auto max-w-screen-xl text-center pt-10 pb-0">
+      <h2 class="brand mb-1 text-6xl font-nunito font-normal tracking-tight leading-none text-white md:text-7xl md:mt-4 lg:text-8xl ">
         <span class="text-custom_green">Green</span>Lab
       </h2>
-      <p class="mx-3 mb-4 xl:mb-8 text-2xl font-thin font-nunito text-white">
+      <p class="mx-3 mb-4 xl:mb-4 text-2xl font-thin font-nunito text-white">
         Універсальна ПЛР Лабораторія</p>
-      <div class="home-buttons space-y-4 space-x-6 sm:flex-row sm:justify-center sm:space-y-0">
+      <div class="home-buttons space-y-1 space-x-6 sm:flex-row sm:justify-center sm:space-y-0">
         <a routerLink="/guide"
           class="gradient-button-green inline-flex justify-center items-center py-2 px-5 text-center">
           Здати аналіз
@@ -18,44 +18,65 @@
       </div>
       <p class="price-info font-jost my-5 md:text-xl lg:text-base lg:my-2">Ціни вказані за станом на 01.03.25</p>
       <!-- <p class="price-info text-dark-red px-10 font-jost my-5 md:text-xl lg:text-lg lg:my-2">Звертаємо Вашу увагу, що з 01.11.24 очікується підвищення цін</p> -->
-      <div class="block shadow-lg bg-gray-900 bg-opacity-10 rounded-2xl text-center font-jost p-1 mx-7 sm:mx-24 md:mx-52 md:mt-8 leading-1 text-base font-normal lg:mx-72 xl:mx-80">
+      <div class="block shadow-lg bg-gray-900 bg-opacity-10 rounded-2xl text-center font-jost p-1 mx-7 sm:mx-24 md:mx-52 md:mt-1 leading-1 text-base font-normal lg:mx-72 xl:mx-80">
         <p>Графік роботи:</p>
         <p>ПН-СБ 10:00 - 18:00</p>
         <p>Видача результатів проводиться з 17:00 по 18:00 у робочі дні</p>
         <p>(Неділя - вихідний)</p>
       </div>
-      <div class="arrow-down">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <div class="box font-nunito text-base px-6 lg:px-0 max-w-screen-lg mx-auto" [class.visible]="isVisible">
+        <div class="relative px-6 pt-2 pb-6 bg-white rounded-3xl mt-6">
+          <h2 class="text-center text-2xl text-gray-800 font-semibold">Останні новини</h2>
+          <div class="flex flex-col lg:flex-row items-center lg:items-start">
+            <div class="max-w-xs w-full bg-white border border-gray-300 rounded-lg shadow-xs lg:mr-6">
+              <img class="rounded-t-lg w-full h-[60px] object-cover" src="../../../../assets/images/news/3816152.jpg" alt="Цистоізоспороз" />
+              <div class="px-5 pb-3">
+                <a routerLink="/news-page-1">
+                  <h5 class="mt-1 text-xl font-semibold tracking-tight text-gray-900">Цистоізоспороз</h5>
+                </a>
+                <p><span class="bg-light-green2 text-custom_green text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Вже в наявності</span></p>
+                <p class="mb-3 text-gray-700 text-sm">Цистоізоспороз – це паразитарне захворювання, що викликається найпростішими – одноклітинними організмами, що належать до роду Cystoisospora.</p>
+                <a routerLink="/news-page-1" class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-sky focus:outline-none focus:ring-blue-300 transition delay-50 duration-300">
+                  Читати більше
+                  <svg class="rtl:rotate-180 w-2.5 h-2.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- <div class="arrow-down">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div> -->
     </div>
   </section>
 
 
-  <div class="box font-nunito text-base px-6 lg:px-0 max-w-screen-lg mx-auto" [class.visible]="isVisible">
+  <!-- <div class="font-nunito text-base px-6 lg:px-0 max-w-screen-lg mx-auto" [class.visible]="isVisible">
     <div class="relative p-6 -mt-16 mb-5 bg-white rounded-3xl shadow-[20px_0_25px_-5px_rgba(0,0,0,0.10),-20px_0_25px_-5px_rgba(0,0,0,0.10)] drop-shadow-md xl:-mt-10">
-      <h2 class="text-center text-3xl pt-3 pb-6 text-gray-800 font-semibold">Останні новини</h2>
-      <div class="flex flex-col lg:flex-row items-center lg:items-start">
-        <div class="max-w-xs w-full bg-white border border-gray-300 rounded-lg shadow-xs lg:mr-6">
-          <img class="rounded-t-lg py-2 w-full h-[100px] object-cover" src="../../../../assets/images/news/3816152.jpg" alt="Цистоізоспороз" />
-          <div class="px-5 pb-3">
-            <a routerLink="/news-page-1">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Цистоізоспороз</h5>
-            </a>
-            <p><span class="bg-yellow-200 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Скоро в наявності</span></p>
-            <p class="mb-3 text-gray-700">Цистоізоспороз – це паразитарне захворювання, що викликається найпростішими – одноклітинними організмами, що належать до роду Cystoisospora.</p>
-            <a routerLink="/news-page-1" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-sky focus:outline-none focus:ring-blue-300 transition delay-50 duration-300">
-              Читати більше
-              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-            </a>
-          </div>
+      <h2 class="text-center text-3xl pt-3 pb-6 text-gray-800 font-semibold">Про нас</h2>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img class="w-full max-w-md md:max-w-full h-auto object-cover" src="../../../assets/images/main/about_us.png" alt="About us">
+        </div>
+        <div class="w-full md:w-1/2">
+          <p class="indent-6 px-4">
+            <b>Greenlab</b> &ndash; сучасна ПЛР-лабораторія для точної молекулярно-генетичної діагностики.  
+            Своєчасна та точна діагностика – ключовий етап у виявленні та попередженні захворювань.  
+            Кожен день перед фахівцями постає питання: «У чому причина захворювання?»  
+            Саме тому ми створили сучасну ПЛР-лабораторію, оснащену високотехнологічним обладнанням та передовими методами аналізу.  
+            Ми використовуємо технологію ПЛР у реальному часі (ПЛР-РЧ), яка забезпечує надзвичайну точність досліджень.  
+            Якщо в біологічному матеріалі присутній навіть найдрібніший фрагмент вірусу або бактерії, ПЛР-РЧ ідентифікує його з максимальною точністю.
+          </p>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   
   
 
