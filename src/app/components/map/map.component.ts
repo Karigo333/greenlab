@@ -25,7 +25,7 @@ export class MapComponent implements AfterViewInit {
         attributionControl: false,
       });
 
-      const icon = L.icon({
+      const iconLoc = L.icon({
         iconUrl: './../../../assets/images/location.png',
         iconSize: [50, 50], 
         iconAnchor: [25, 40], 
@@ -37,7 +37,7 @@ export class MapComponent implements AfterViewInit {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(this.map);
 
-      const marker = L.marker([46.305836601552954, 30.649910834652218], {icon}).addTo(this.map);
+      const marker = L.marker([46.305836601552954, 30.649910834652218], {icon: iconLoc}).addTo(this.map);
 
       marker.bindPopup(`
         <div style="display: flex; align-items: end;">
