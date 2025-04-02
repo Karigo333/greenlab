@@ -1,7 +1,8 @@
-import { Component, Input, Output, EventEmitter, OnInit, Inject, PLATFORM_ID, HostListener, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { MapComponent } from '../../map/map.component';
 
 
 @Component({
@@ -9,9 +10,8 @@ import { Title } from '@angular/platform-browser';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
+    MapComponent,
     RouterLink,
-    RouterLinkActive
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
