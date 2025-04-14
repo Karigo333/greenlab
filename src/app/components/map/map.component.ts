@@ -17,6 +17,7 @@ export class MapComponent implements AfterViewInit {
   async ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       const L = await import('leaflet');
+      console.log(L);
 
       this.map = L.map('map', {
         center: [46.305836601552954, 30.649910834652218],
