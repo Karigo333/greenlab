@@ -26,7 +26,7 @@ export class MapComponent implements AfterViewInit {
       });
 
       const iconLoc = L.icon({
-        iconUrl: './../../../assets/images/location.png',
+        iconUrl: '../../../assets/images/location.png',
         iconSize: [50, 50], 
         iconAnchor: [25, 40], 
         popupAnchor: [0, -25],
@@ -41,23 +41,20 @@ export class MapComponent implements AfterViewInit {
 
       marker.bindPopup(`
         <div style="display: flex; align-items: end;">
-          <img src="./../../../favicon.ico" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
+          <img src="../../../favicon.ico" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
           <b>Greenlab</b>
         </div>
         ул. Олександрійська 2, Чорноморськ
       `).openPopup();
     }
 
-      // Проверка, чтобы работать с контейнером только после инициализации карты
   if (this.map && this.map.getContainer()) {
     this.map.getContainer().addEventListener('wheel', (event: WheelEvent) => {
-      if (event.ctrlKey) { // Если зажат Ctrl
-        event.preventDefault(); // Предотвращаем стандартное поведение (зум колесиком)
+      if (event.ctrlKey) {
+        event.preventDefault();
         if (event.deltaY < 0) {
-          // Прокрутка вверх — приближаем
           this.map.zoomIn();
         } else {
-          // Прокрутка вниз — удаляем
           this.map.zoomOut();
         }
       }
