@@ -59,7 +59,4 @@ export class HomeComponent implements AfterViewInit {
       observer.observe(this.el.nativeElement.querySelector('.box'));
     }
   }
-
-
-  
 }

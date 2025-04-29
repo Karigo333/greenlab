@@ -1,15 +1,15 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, ViewChild, ElementRef, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Inject, PLATFORM_ID } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('mapContainer', { static: true }) mapContainer!: ElementRef;
   private map!: L.Map;
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
@@ -17,21 +17,19 @@ export class MapComponent implements AfterViewInit {
   async ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       const leafletModule = await import('leaflet');
-      const L = leafletModule.default || leafletModule; // Ensure proper initialization of L
-      console.log(L);
+      const L = leafletModule.default || leafletModule;
 
-      this.map = L.map('map', {
+      this.map = L.map(this.mapContainer.nativeElement, {
         center: [46.305836601552954, 30.649910834652218],
         zoom: 15,
         scrollWheelZoom: false,
         attributionControl: false,
-        
       });
 
       const iconLoc = L.icon({
         iconUrl: '../../../assets/images/location.png',
-        iconSize: [50, 50], 
-        iconAnchor: [25, 40], 
+        iconSize: [50, 50],
+        iconAnchor: [25, 40],
         popupAnchor: [0, -25],
         className: 'no-border'
       });
@@ -40,16 +38,13 @@ export class MapComponent implements AfterViewInit {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(this.map);
 
-      const marker = L.marker([46.305836601552954, 30.649910834652218], {icon: iconLoc}).addTo(this.map);
+      const marker = L.marker([46.305836601552954, 30.649910834652218], { icon: iconLoc }).addTo(this.map);
 
-    
-      
       const popup = L.popup({
         className: 'no-padding-popup',
         maxWidth: 150,
         closeButton: true,
-      })
-        .setLatLng([46.305836601552954, 30.649910834652218])
+      }).setLatLng([46.305836601552954, 30.649910834652218])
         .setContent(`
           <div style="margin: 0;">
             <div style="display: flex; align-items: end;">
@@ -59,21 +54,26 @@ export class MapComponent implements AfterViewInit {
             ул. Олександрійська 2, Чорноморськ
           </div>
         `);
-      
-      marker.bindPopup(popup).openPopup();
-    }
 
-  if (this.map && this.map.getContainer()) {
-    this.map.getContainer().addEventListener('wheel', (event: WheelEvent) => {
-      if (event.ctrlKey) {
-        event.preventDefault();
-        if (event.deltaY < 0) {
-          this.map.zoomIn();
-        } else {
-          this.map.zoomOut();
+      marker.bindPopup(popup).openPopup();
+
+      // wheel zoom
+      this.map.getContainer().addEventListener('wheel', (event: WheelEvent) => {
+        if (event.ctrlKey) {
+          event.preventDefault();
+          if (event.deltaY < 0) {
+            this.map.zoomIn();
+          } else {
+            this.map.zoomOut();
+          }
         }
-      }
-    });
+      });
+    }
   }
+
+  ngOnDestroy(): void {
+    if (this.map) {
+      this.map.remove();
+    }
   }
 }
