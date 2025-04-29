@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { MapComponent } from "../../map/map.component";
 
 @Component({
     selector: 'app-contact',
     standalone: true,
     imports: [
-        CommonModule,
-        RouterOutlet
-    ],
+    CommonModule,
+    MapComponent,
+],
     templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 
 export class ContactComponent {

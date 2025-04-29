@@ -26,6 +26,7 @@ module.exports = {
       'custom_green': '#008000',
       'gray-300': '#e0e0e0',
       'gray-800': '#6c757d',
+      'gray-850': '#4b5054',
       'gray-900': '#111827',
       'blue': '#0000ff',
       'light-green': '#35fd7b',
