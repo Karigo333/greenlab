@@ -18,26 +18,23 @@
         <div class="my-10">
             <p>Організація лабораторних досліджень, а саме здачі діагностичних тестів складається з декількох етапів:</p>
             <!-- Component: Activity feed -->
-            <ul role="feed" class="relative flex flex-col gap-12 py-12 pl-8 before:absolute before:top-0 before:left-8 before:h-full  before:border-violet  after:absolute after:top-6 after:left-8 after:bottom-6 after:border after:-translate-x-1/2 after:border-violet ">
+            <ul role="feed" class="relative flex flex-col gap-12 py-12 pl-8 before:absolute before:top-0 before:left-8 before:h-full  before:border-bermuda  after:absolute after:top-6 after:left-8 after:bottom-6 after:border after:-translate-x-1/2 after:border-sky ">
                 <div class="absolute top-0 left-8 h-full flex flex-col items-center gap-1 -translate-x-1/2">
-                    <!-- Первая точка -->
-                    <span class="w-1.5 h-1.5 bg-violet rounded-full"></span>
-                    <!-- Вторая точка -->
-                    <span class="w-2 h-2 bg-violet rounded-full"></span>
-                    <!-- Третья точка -->
-                    <span class="w-2.5 h-2.5 bg-violet rounded-full"></span>
+                    <span class="w-1.5 h-1.5 bg-sky rounded-full"></span>
+                    <span class="w-2 h-2 bg-sky rounded-full"></span>
+                    <span class="w-2.5 h-2.5 bg-sky rounded-full"></span>
                   </div>
                 <li role="article" class="relative pl-8 ">
                 <span class="absolute left-0 z-10 flex items-center justify-center w-10 h-10 -translate-x-1/2 rounded-full text-slate-700 ring-2 ring-white bg-light-green ">
-                    <svg stroke-width="1" class="w-5 h-5" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                    <svg stroke-width="1" class="w-5 h-5" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
                 </span>
                 <div class="flex flex-col flex-1 gap-0">
                     <h4 class="text-xl font-medium text-slate-700"> Підготовка </h4>
                     <p class="text-base text-slate-500">&ndash; визначиться з типом досліджень</p>
                     <p class="text-base text-slate-500">&ndash; вибрати матеріал для діагностики (з огляду на клінічні ознаки, особливості захворювання і шлях збудника)</p>
-                    <p class="text-base text-slate-500">&ndash; підготуйте тварину до аналізу (див. <a routerLink="/preparation" class="text-blue">Підготуйте тварини до аналізу</a>)</p>
+                    <p class="text-base text-slate-500">&ndash; підготуйте тварину до аналізу (див. <a routerLink="/preparation" class="underline">Підготуйте тварини до аналізу</a>)</p>
                     <p class="text-base text-slate-500">&ndash; підготуйте витратні матеріали для відбору, зберігання та транспортування (див. 
-                        <a routerLink="/materials" class="text-blue">Витратний матеріал</a>)
+                        <a routerLink="/materials" class="underline">Витратний матеріал</a>)
                     </p>
                     <div class="flex flex-wrap justify-start">
                         <img src="../../../../assets/images/containers/edta.png" class="w-24 lg:w-40" alt="edta">
@@ -53,8 +50,8 @@
                 </span>
                 <div class="flex flex-col flex-1 gap-0">
                     <h4 class="text-xl font-medium text-slate-700">Збір матеріалу</h4>
-                    <p class="text-base text-slate-500">&ndash; Згідно правил зробити відбір матеріалу для лабораторних досліджень (див. 
-                        <a routerLink="/rules" class="text-blue">Правила збіру проб</a>)
+                    <p class="text-base text-slate-500">&ndash; згідно правил зробити відбір матеріалу для лабораторних досліджень (див. 
+                        <a routerLink="/rules" class="underline">Правила збіру проб</a>)
                     </p>
                 </div>
                 </li>
@@ -65,8 +62,8 @@
                     <div class="flex flex-col flex-1 gap-0">
                         <h4 class="text-xl font-medium text-slate-700">Оформлення</h4>
                         <p class="text-base text-slate-500">&ndash; маркування пробірок (вказати породу, ім'я тварини та прізвище власника на кожній пробірці, які
-                            відправляються в лабораторію) (див. <a routerLink="/marking" class="text-blue">Маркування проб</a>)</p>
-                        <p>&ndash; Заповніть направлення для дослідження</p>
+                            відправляються в лабораторію) (див. <a routerLink="/marking" class="underline">Маркування проб</a>)</p>
+                        <p>&ndash; заповніть направлення для дослідження</p>
                         <div class="inline">
                             <a href="../../../../assets/files/blank.pdf" download class="gradient-button-green "><img width="20" class="float-left mr-2"
                                 src="https://img.icons8.com/fluency-systems-regular/48/download--v1.png" alt="Направлення на дослідження" />
@@ -82,7 +79,7 @@
                 <div class="flex flex-col flex-1 gap-0">
                     <h4 class="text-xl font-medium text-slate-700"> Доставка у лабораторію </h4>
                     <p class="text-base text-slate-500">Після того, як матеріал буде готовий до відправки в лабораторію, звяжіться з нами для доставки у
-                        лабораторію за телефоном (див. <a routerLink="/contact" class="text-blue">Контакти</a>). Зразки доставляються в
+                        лабораторію за телефоном (див. <a routerLink="/contact" class="underline">Контакти</a>). Зразки доставляються в
                         лабораторію в день відбіру або на наступний день <strong>"Новою поштою"</strong> за адресою: </p>
                     <p><i class="bg-light-green2 px-2">Нова пошта №1, м.Чорноморськ, 0962986084, отримувач Зелена Ольга Валеріївна</i></p>
                 </div>
@@ -100,9 +97,9 @@
                     </li>
 
                     <div class="absolute -bottom-1 left-8 h-full flex flex-col-reverse    items-center gap-1 -translate-x-1/2">
-                        <span class="w-2.5 h-2.5 bg-violet rounded-full"></span>
-                        <span class="w-2 h-2 bg-violet rounded-full"></span>
-                        <span class="w-1.5 h-1.5 bg-violet rounded-full"></span>
+                        <span class="w-2.5 h-2.5 bg-sky rounded-full"></span>
+                        <span class="w-2 h-2 bg-sky rounded-full"></span>
+                        <span class="w-1.5 h-1.5 bg-sky rounded-full"></span>
                     </div>
             </ul>
             <!-- End Activity feed -->
