@@ -39,6 +39,7 @@ module.exports = {
       'blue-700': '#2b6cb0',
       'yellow-200': '#fefcbf',
       'yellow-800': '#975a16',
+      'green-500': '#008000',
       
     },
     backgroundImage: {

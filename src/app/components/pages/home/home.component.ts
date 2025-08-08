@@ -54,7 +54,7 @@ export class HomeComponent implements AfterViewInit {
           this.isVisible = true;
           observer.disconnect();
         }
-      }, { threshold: 0.5 });
+      }, { threshold: 0.3 });
 
       observer.observe(this.el.nativeElement.querySelector('.box'));
     }
