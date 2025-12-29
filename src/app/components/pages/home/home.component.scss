@@ -3,8 +3,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    min-height: 100svh; /* Высота с учетом видимых панелей */
-    // height: 90lvh;     /* Высота без видимых панелей */
+    min-height: 100svh;
     border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
     -webkit-border-radius: 0 0 30px 30px;
@@ -13,9 +12,7 @@
 @media screen and (max-width: 650px) {
     .gradient-button-green {
         font-size: 10px;
-        // padding: 10px 20px;
         letter-spacing: 1px;
-        // margin: 0 5% 0 0;
     }
     .gradient-button-blue {
         font-size: 10px;
@@ -33,9 +30,9 @@
 }
 
 .certificate img {
-    width: 70%;  /* Установка ширины изображений на 70% */
-    aspect-ratio: 3/2;  /* Соотношение сторон изображений 3:2 */
-    object-fit: contain;  /* Обеспечивает сохранение пропорций изображений */
+    width: 70%;
+    aspect-ratio: 3/2; 
+    object-fit: contain; 
 }
 
 
