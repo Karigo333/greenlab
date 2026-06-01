@@ -1,6 +1,11 @@
 <div class="slideshow-container w-full xl:w-1/2">
   <div *ngFor="let image of images; let i = index" #mySlides class="mySlides fade">
-    <a [href]="image" class="w-full" target="_blank"><img [src]="image" alt="Image"></a>
+    <img
+      [src]="image"
+      class="slide-image cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+      alt="Image"
+      (click)="openImage(image)"
+    >
   </div>
 
   <a class="prev" (click)="plusSlides(-1)">&#10094;</a>

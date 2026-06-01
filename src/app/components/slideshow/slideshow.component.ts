@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, AfterViewInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';  // Импортируйте нужные модули для standalone компонента
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';  // Импортируйте н�
 })
 export class SlideshowComponent implements OnInit, AfterViewInit {
   @Input() images: string[] = [];
+  @Output() imageClick = new EventEmitter<string>();
   slideIndex = 1;
 
   @ViewChildren('mySlides') slideElements!: QueryList<ElementRef>;
@@ -27,6 +28,10 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
 
   currentSlide(n: number) {
     this.showSlides(this.slideIndex = n);
+  }
+
+  openImage(image: string) {
+    this.imageClick.emit(image);
   }
 
   showSlides(n: number) {

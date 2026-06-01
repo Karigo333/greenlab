@@ -1,0 +1,18 @@
+<div
+    *ngIf="open"
+    class="modal-backdrop fixed inset-0 flex justify-center p-4"
+    [style.--modal-top]="topOffset"
+    (click)="modalClose.emit()"
+>
+    <div class="max-w-5xl w-full flex flex-col items-center">
+        <img
+            [src]="imageUrl"
+            [alt]="caption"
+            class="modal-content max-w-full object-contain rounded-lg shadow-lg"
+        >
+
+        <p class="modal-caption text-white text-center mt-4 text-lg">
+            {{ caption }}
+        </p>
+    </div>
+</div>

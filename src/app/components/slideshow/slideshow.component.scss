@@ -10,9 +10,17 @@
     display: none;
   }
   
-  img {
+  .slide-image {
     width: 100%;
+    max-width: 18rem;
     height: auto;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 640px) {
+    .slide-image {
+      max-width: 20rem;
+    }
   }
   
   .prev, .next {

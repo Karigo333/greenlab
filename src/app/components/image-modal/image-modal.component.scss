@@ -1,0 +1,93 @@
+.modal-backdrop {
+    top: 0;
+    z-index: 1100;
+    align-items: center;
+    padding: 20px 12px 16px;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+.modal-content {
+    max-height: calc(100vh - 92px);
+    animation: modalZoomIn 0.45s ease-out forwards;
+}
+
+.modal-caption {
+    animation: modalCaptionIn 0.45s ease-out 0.1s forwards;
+    max-width: min(90vw, 700px);
+    opacity: 0;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalCaptionIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-backdrop,
+    .modal-content,
+    .modal-caption {
+        animation: none;
+    }
+
+    .modal-caption {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .modal-backdrop {
+        padding: 28px 24px 20px;
+    }
+
+    .modal-content {
+        max-height: calc(100vh - 112px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal-backdrop {
+        top: var(--modal-top);
+        z-index: 20;
+    }
+
+    .modal-content {
+        max-height: calc(100vh - var(--modal-top) - 128px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .modal-content {
+        max-height: calc(100vh - var(--modal-top) - 140px);
+    }
+}

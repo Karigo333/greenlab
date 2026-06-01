@@ -3,6 +3,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MapComponent } from '../../map/map.component';
+import { ImageModalComponent } from '../../image-modal/image-modal.component';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { MapComponent } from '../../map/map.component';
   imports: [
     CommonModule,
     MapComponent,
+    ImageModalComponent,
     RouterLink,
   ],
   templateUrl: './home.component.html',
@@ -32,9 +34,11 @@ export class HomeComponent implements AfterViewInit {
   modalOpen = false;
   modalImageUrl = '';
   modalCaption = '';
+  modalTopOffset = '0px';
   
 
   openModal(imageUrl: string, caption: string) {
+    this.setModalTopOffset();
     this.modalOpen = true;
     this.modalImageUrl = imageUrl;
     this.modalCaption = caption;
@@ -42,6 +46,15 @@ export class HomeComponent implements AfterViewInit {
 
   closeModal() {
     this.modalOpen = false;
+    this.modalImageUrl = '';
+    this.modalCaption = '';
+  }
+
+  private setModalTopOffset() {
+    const stickyHeader = document.querySelector('.sticky-header');
+    const headerBottom = stickyHeader?.getBoundingClientRect().bottom ?? 0;
+
+    this.modalTopOffset = `${Math.max(headerBottom, 0)}px`;
   }
 
   

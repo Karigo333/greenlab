@@ -14,16 +14,64 @@
                 України. Усі аналізи виконуються виключно на приладах та устаткуванні, які пройшли метрологічну
                 перевірку та відповідають усім вимогам та критеріям діагностичної лабораторії.</p>
 
-            <div class="flex flex-col xl:flex-row">
-                <div class="">
+            <!-- <div class="flex flex-col xl:flex-row mx-auto">
+                <div class="w-1/3">
                     <h4 class="font-bold text-2xl text-center my-8 mt-20">Сертифікат визнання вимірювальних можливостей</h4>
-                    <img src="../../../../assets/images/main/doc_certificate.png" class="mx-auto w-96" alt="Сертифікат визнання вимірювальних можливостей">
+                    <img src="../../../../assets/images/main/doc_certificate.png" class="mx-auto w-80" alt="Сертифікат визнання вимірювальних можливостей">
                 </div>
-                <div class="">
-                    <h4 class="font-bold text-2xl text-center my-8 mt-20">Ліцензія на провадження господарської діяльності з ветеринарної практики</h4>
-                    <img src="../../../../assets/images/license/doc1.png" class="mx-auto w-96" alt="Ліцензія на провадження господарської діяльності з ветеринарної практики">
+                <div class="w-2/3">
+                    <h4 class="font-bold text-2xl text-center my-8 mt-20">Ліцезія на провадження господарської діяльності з ветеринарної практики</h4>
+                    <div class="flex flex-col xl:flex-row">
+                        <img src="../../../../assets/images/license/customer_secure_doc/customer_secure_doc1.jpg" class="mx-auto w-80" alt="Ліцензія на провадження господарської діяльності з ветеринарної практики">
+                        <img src="../../../../assets/images/license/customer_secure_doc/customer_secure_doc2.jpg" class="mx-auto w-80" alt="Ліцензія на провадження господарської діяльності з ветеринарної практики">
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="flex flex-col xl:flex-row gap-10 xl:gap-6 mx-auto">
+                <div class="w-full xl:w-1/3">
+                    <h4 class="font-bold text-xl sm:text-2xl text-center my-6 xl:my-8 xl:mt-20">
+                        Сертифікат визнання вимірювальних можливостей
+                    </h4>
+
+                    <img
+                        src="../../../../assets/images/main/doc_certificate.png"
+                        class="mx-auto w-full max-w-72 sm:max-w-80 cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                        alt="Сертифікат визнання вимірювальних можливостей"
+                        (click)="openModal('../../../../assets/images/main/doc_certificate.png', 'Сертифікат визнання вимірювальних можливостей')"
+                    >
+                </div>
+
+                <div class="w-full xl:w-2/3">
+                    <h4 class="font-bold text-xl sm:text-2xl text-center my-6 xl:my-8 xl:mt-20">
+                        Ліцензія на провадження господарської діяльності з ветеринарної практики
+                    </h4>
+
+                    <div class="flex flex-col md:flex-row gap-8 xl:gap-4">
+                        <img
+                            src="../../../../assets/images/license/customer_secure_doc/customer_secure_doc1.jpg"
+                            class="mx-auto w-full max-w-72 sm:max-w-80 cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                            alt="Ліцензія на провадження господарської діяльності з ветеринарної практики"
+                            (click)="openModal('../../../../assets/images/license/customer_secure_doc/customer_secure_doc1.jpg', 'Ліцензія на провадження господарської діяльності з ветеринарної практики')"
+                        >
+
+                        <img
+                            src="../../../../assets/images/license/doc1.png"
+                            class="mx-auto w-full max-w-72 sm:max-w-80 cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                            alt="Ліцензія на провадження господарської діяльності з ветеринарної практики"
+                            (click)="openModal('../../../../assets/images/license/doc1.png', 'Ліцензія на провадження господарської діяльності з ветеринарної практики')"
+                        >
+                    </div>
                 </div>
             </div>
+
+            <app-image-modal
+                [open]="modalOpen"
+                [imageUrl]="modalImageUrl"
+                [caption]="modalCaption"
+                [topOffset]="modalTopOffset"
+                (modalClose)="closeModal()"
+            ></app-image-modal>
             
 
             <h4 class="font-bold text-2xl text-center my-2 mt-20">Акт санітарно-епідеміологічного обстеження об'єкта</h4>
@@ -34,7 +82,8 @@
             '../../../../assets/images/license/act4.png',
             '../../../../assets/images/license/act5.png',
             '../../../../assets/images/license/act6.png',
-            ]">
+            ]"
+            (imageClick)="openModal($event, sanitaryActCaption)">
             </app-slideshow>
 
             <h4 class="font-bold text-2xl text-center my-2 mt-20">Перелік вимірювальних можливостей</h4>
@@ -57,7 +106,8 @@
                 '../../../../assets/images/license/16.png',
                 '../../../../assets/images/license/17.png',
                 '../../../../assets/images/license/18.png',
-                ]">
+                ]"
+                (imageClick)="openModal($event, measurementListCaption)">
             </app-slideshow>
         </div>
     </div>
